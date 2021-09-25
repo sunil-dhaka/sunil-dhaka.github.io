@@ -1,0 +1,91 @@
+I"ã <p>Hello again â˜». Here I am planning to write a journal about creating this website using jekyll. I am using linux os, and code snippets from terminal will be according to linux. So be aware. Now to install you need to type these commmands in terminal window.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>make build-essential ruby ruby-dev
+<span class="nb">sudo </span>apt <span class="nb">install </span>gem
+<span class="nb">sudo </span>gem jekyll bundler
+</code></pre></div></div>
+
+<p><strong>Note:</strong> here sudo is being used to make changes like installing or unistalling or writting something in a file etc, as an administrator. We are installing ruby libraries like jekyll and bundler using gem because gem manages ruby software libraries, by manages I mean downloading, installing and managing the software history. BUndler is being installed so that we are running the same version of Jekyll and its plugins across different environments. Now to create a new website named <code class="language-plaintext highlighter-rouge">--blog_cum_portfolio--</code> type these, after changing to your home directory.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/
+jekyll new blog_cum_portfolio
+</code></pre></div></div>
+
+<p>Now, to serve this newly created static website run,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve <span class="nt">-o</span> <span class="nt">--liverload</span>
+</code></pre></div></div>
+
+<p>To stop press <code class="language-plaintext highlighter-rouge">Ctrl + C</code>. I have used <code class="language-plaintext highlighter-rouge">-o</code> to show build site on my default web browser automatically and <code class="language-plaintext highlighter-rouge">--livereload</code>(read as: live reload) to reload automatically whenever there is some changes made. To view and learn more about these use <code class="language-plaintext highlighter-rouge">--help</code> page in terminal. Also your website locally can be viewd at <a href="http://localhost:4000">http://localhost:4000</a>. If you find some issue during build use <a href="https://jekyllrb.com/docs/troubleshooting/#configuration-problems">jekyll troubleshooting pages</a>.</p>
+
+<p><strong>Link to other posts using <code class="language-plaintext highlighter-rouge">post_url</code></strong></p>
+
+<p>Now without worrying about breakdown of other links, we can give url to other posts in your current post. This is how you use it. I also have used below to give link to my previous post.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/scrapping/2021/09/21/let-us-start.html
+<span class="o">[</span>Name of Link]<span class="o">({</span> /post_url 2021-09-22-name-of-post <span class="o">})</span>
+</code></pre></div></div>
+
+<p><strong>Add an image and a pdf</strong></p>
+
+<p>To add image,</p>
+
+<pre><code class="language-jekyll">![Alternative image text.](/assets/postcard.jpg)
+![go to this pdf file](/assets/postcard.pdf)
+</code></pre>
+
+<p>Here is the image of my postcard, and here is my <a href="/assets/postcard.pdf">pdf</a>
+<img src="/assets/images/postcard.jpg" alt="Postcard image" /></p>
+
+<p><strong>Note:</strong> When there is error like <em>jekyll server is in use</em> get the <em>ps</em> ID and kill it like this,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps aux | <span class="nb">grep</span> <span class="nt">-ID-</span>
+</code></pre></div></div>
+<p>and then re-build the site.</p>
+
+<p><strong>Assets:</strong> Create a new directory named <code class="language-plaintext highlighter-rouge">assets</code> to include your pdfs, images, javascripts and other files. You can mkae different directories for all types of files. I have done,</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>pdfs ppts images html css js
+</code></pre></div></div>
+<p><strong>Mathjax and Code:</strong> This is how we include an equation, inline: <code class="language-plaintext highlighter-rouge">$E=mc^2$</code> shows as $E=mc^2$, and block as, <code class="language-plaintext highlighter-rouge">$$ \bar{X}=\frac{\sum_{i=1}^n x_i}{n} $$</code></p>
+
+\[\bar{X}=\frac{\sum_{i=1}^n x_i}{n}\]
+
+<p>Although mathjax is not included in jekyll. We can include it by inserting these scripts at the end of <code class="language-plaintext highlighter-rouge">_layouts/default.html</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-mathjax-config"</span><span class="nt">&gt;</span>
+<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+  <span class="na">tex2jax</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">inlineMath</span><span class="p">:</span> <span class="p">[[</span><span class="dl">'</span><span class="s1">$</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">$</span><span class="dl">'</span><span class="p">],</span> <span class="p">[</span><span class="dl">'</span><span class="se">\\</span><span class="s1">(</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="se">\\</span><span class="s1">)</span><span class="dl">'</span><span class="p">]],</span>
+    <span class="na">processEscapes</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>I have used two <code class="language-plaintext highlighter-rouge">back-ticks</code> to show what is being wriiten in english to write math equations. Two back ticks can be use to highlight any text in paragraphs. For code <code class="language-plaintext highlighter-rouge">rouge</code> highlighter, add these lines in your <code class="language-plaintext highlighter-rouge">_config.yml</code></p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#conversion</span>
+<span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
+
+<span class="c1"># markdown processing</span>
+<span class="na">kramdown</span><span class="pi">:</span>
+  <span class="na">input</span><span class="pi">:</span> <span class="s">GFM</span>
+</code></pre></div></div>
+
+<p>Although jekyll uses GitHub Flavored Markdown (GFM) processor by default for syntax highlighting but you can specifiy by <code class="language-plaintext highlighter-rouge">input: GFM</code>.</p>
+
+<h4 id="to-dos">To-Dos</h4>
+
+<hr />
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create a process that takes markdown posts through a spell check: maybe use a spell check plugin in your text editor</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />How to link to other files or posts/other layouts: write a <em>h4</em> for that</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create these pages: links, tags, categories and</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Need to automate some other things also like: spellchecking, include text-reader, include color-line that tells how much time is remaining to complete the post</li>
+</ul>
+
+<p><a href="/scrapping/2021/09/21/let-us-start.html">Check Out Scrapping!</a></p>
+
+:ET

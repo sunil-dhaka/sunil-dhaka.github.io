@@ -8,4 +8,4 @@ Sunil Dhaka\\
 Falgun Rave, 100 St. James Circle\\
 Betaunlung, AP 110113
 
-![Postcard Image](/assets/postcard.jpg)
+![Postcard Image](/assets/images/postcard.jpg)

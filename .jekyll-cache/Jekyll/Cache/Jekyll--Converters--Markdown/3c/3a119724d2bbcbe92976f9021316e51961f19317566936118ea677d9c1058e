@@ -1,0 +1,47 @@
+I"Å<p>In this video we are going to parse information on <a href="https://www.youtube.com/playlist?list=PLRVhX1weTUd_hs_mcpfwcOq18tSdL0y60">some</a> channelâ€™s content and store it into a csv file. Mainly information about video title, video discription, how many time it has been watched etc. I have given a step by step procedure, with that you should be able to parse detail about YT video on any playlist. Explanations are in <code class="language-plaintext highlighter-rouge">code</code> comments.</p>
+
+<ol>
+  <li>I will be using only three modules to do it.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="k">as</span> <span class="n">bs</span>
+<span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># self explanatory
+</span></code></pre></div>    </div>
+  </li>
+  <li>Request and store parsed data.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">link</span><span class="o">=</span><span class="s">'https://www.youtube.com/playlist?list=PLRVhX1weTUd_hs_mcpfwcOq18tSdL0y60'</span> <span class="c1"># particular linkis used
+</span><span class="n">r</span><span class="o">=</span><span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span> <span class="c1"># requests data form link
+</span><span class="n">page</span><span class="o">=</span><span class="n">r</span><span class="p">.</span><span class="n">text</span> <span class="c1">#convert into text
+</span><span class="n">soup</span><span class="o">=</span><span class="n">bs</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="s">'html.parser'</span><span class="p">)</span> <span class="c1">#parse using BS
+#print(soup.prettify()) # if want to see the structure of parsed data uncomment it.
+</span></code></pre></div>    </div>
+  </li>
+  <li>Get title of videos.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">title_soup</span><span class="o">=</span><span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'meta'</span><span class="p">,</span><span class="nb">property</span><span class="o">=</span><span class="s">'og:title'</span><span class="p">)</span>
+<span class="n">vid_title</span><span class="o">=</span><span class="n">title_soup</span><span class="p">[</span><span class="s">'content'</span><span class="p">]</span> <span class="k">if</span> <span class="n">title_soup</span> <span class="k">else</span> <span class="s">'not found'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">vid_title</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Get Discriptions of videos
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">disrip_soup</span><span class="o">=</span><span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'meta'</span><span class="p">,</span><span class="nb">property</span><span class="o">=</span><span class="s">'og:description'</span><span class="p">)</span>
+<span class="n">vid_discription</span><span class="o">=</span><span class="n">disrip_soup</span><span class="p">[</span><span class="s">'content'</span><span class="p">]</span> <span class="k">if</span> <span class="n">disrip_soup</span> <span class="k">else</span> <span class="s">'not found'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">vid_discription</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <blockquote>
+      <p>And,</p>
+    </blockquote>
+  </li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_soup</span><span class="o">=</span><span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'meta'</span><span class="p">,</span><span class="n">itemprop</span><span class="o">=</span><span class="s">'uploadDate'</span><span class="p">)</span> <span class="c1"># does not work with playlist
+</span><span class="n">upload_date</span><span class="o">=</span><span class="n">date_soup</span><span class="p">[</span><span class="s">'content'</span><span class="p">]</span> <span class="k">if</span> <span class="n">date_soup</span> <span class="k">else</span> <span class="s">'not found'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">upload_date</span><span class="p">)</span>
+<span class="c1">#-&gt;not found
+</span></code></pre></div></div>
+
+<p><strong>Reference</strong>: <a href="https://medium.com/brainstation23/how-to-become-a-pro-with-scraping-youtube-videos-in-3-minutes-a6ac56021961">Medium article</a></p>
+
+<p><strong>Language Identifier</strong>: <a href="https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers">Git Page</a></p>
+
+<p><strong>Syntax Themes</strong>: <a href="http://jwarby.github.io/jekyll-pygments-themes/languages/python.html">Pagments CSS Themes</a></p>
+
+<p><strong>Article</strong>: <a href="https://www.digitalocean.com/community/tutorials/how-to-control-urls-and-links-in-jekyll">Article to follow</a></p>
+:ET
