@@ -1,7 +1,0 @@
-I"Ç<p>Remember these are according to my understanding,not official or anything. Now, basic thing is to install git on your linux machine using terminal. Github has all nice documentations, try to use only these official sources. I have done this to get my git <a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md">CLI</a>,</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-fsSL</span> https://cli.github.com/packages/githubcli-archive-keyring.gpg | <span class="nb">sudo </span>gpg <span class="nt">--dearmor</span> <span class="nt">-o</span> /usr/share/keyrings/githubcli-archive-keyring.gpg
-<span class="nb">echo</span> <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2"> signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main"</span> | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/github-cli.list <span class="o">&gt;</span> /dev/null
-<span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install </span>gh
-</code></pre></div></div>
-:ET
