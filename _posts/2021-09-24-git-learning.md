@@ -56,3 +56,15 @@ When you have pushed a file that contains sensetive info like passwords etc, we 
 ```bash
 git filter-branch --force --index-filter --prune-empty "git rm --cached --ignore-unmatch <path_to_file>" HEAD
 ```
+
+**`Create new branch:`**
+It is easy. You can create it first locally and then set an upstream branch by,
+```bash
+git branch `name-of-branch`
+git push --set-upstream origin `name-of-branch`
+```
+Other way around, is even simpler: first create a new branch on github website repo and then make it local,
+```bash
+git branch --list # lists all branches
+
+```

@@ -3,3 +3,4 @@ Gemfile.lock
 .jekyll-cache/
 .ipynb_checkpoints/
 _config.yml.save
+_drafts/
