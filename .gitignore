@@ -2,3 +2,5 @@ _site/
 Gemfile.lock
 .jekyll-cache/
 _drafts/
+.ipynb_checkpoints/
+_config.yml.save

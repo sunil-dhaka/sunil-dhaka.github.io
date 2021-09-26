@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+  {%- include head.html -%}
 
   <body>
 
-    {% include header.html %}
+    {%- include header.html -%}
 
-    <div class="page-content">
+    <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
-    </div>
+    </main>
 
-    {% include footer.html %}
+    {%- include footer.html -%}
 
   </body>
-
-</html>
-
+    <!-- with internet it should render math -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
-    <!-- displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ], -->
     processEscapes: true
-    <!-- skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] -->
-    <!-- refernce used:http://blog.lostinmyterminal.com/webpages/2015/01/09/math-support-in-jekyll.html -->
+    <!-- https://zjuwhw.github.io/ :: see this page's reference -->
   }
 });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</html>

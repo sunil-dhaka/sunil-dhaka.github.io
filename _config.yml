@@ -4,16 +4,20 @@ plugins:
   - jekyll-feed
 
 # set timezone
-timezone: Asia/Kolkata
+timezone: "Asia/Kolkata"
 
 #conversion
 markdown: kramdown
-highlighter: rouge
-
 # markdown processing
 kramdown:
   input: GFM
-
+  math_engine: mathjax
+  syntax_highlighter: rouge
+#not changable configurations for github pages
+#lsi: false
+#safe: true
+#incremental: false
+highlighter: rouge
 # site settings
 
 # author profile
@@ -33,34 +37,45 @@ kramdown:
 # https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
+permalink: /:categories/:title.html # don't need to specify in each post and better than date followed by title
+host: 127.0.0.1 #local
+disable_disk_cache: True
+port: 8000
+livereload: True
+open_url: True
+show_drafts: False
+# _layouts: True ## NEED to work on it
+destination: _site
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Dhaka's Blog
+title: Git Page-Minima
 email: something@something.bs
 description: >
-  Welcome to my blog 👽! I am hopping to use this space to share things that I am learning. To be honest I don't know ⌣ for what it will be used.
-twitter_username: sbnclasses
+  Welcome to my jekyll site 👽! I am hopping to use this space to share things that I am learning. To be honest I don't know ⌣ for what it will be used.
+#baseurl:
+url: "https://sunil-dhaka.github.io/"
+twitter_username: jamesbond
 github_username:  sunil-dhaka
+# jekyll have not defaulted author so to do that we add it in configuration file
+author: Sunil Dhaka
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# new fields created
+copyright: "Sunil Dhaka"
+
+include:
+   - .htaccess
+
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
