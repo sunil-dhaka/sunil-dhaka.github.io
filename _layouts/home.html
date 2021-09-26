@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+     <!-- How to create an header image for the posts comment -- it to not creat post headers
+        {%- if post.image -%}
+        <img src="{{ post.image | relative_url }}", alt="post image", class="post-image">
+        {%- else -%}
+          {%- assign defaultPostImage = "/assets/images/postcard.jpg" -%}
+        <img src="{{ defaultPostImage }}", alt="post image", class="post-image">
+    {%- endif -%}
+    -->
+      <!--little syntax problem are really tough to work with that is why need an proper editor to sort out these mistakes-->
+    <h1 class="post-ti
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
