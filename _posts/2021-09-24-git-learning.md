@@ -96,4 +96,4 @@ git branch `receiving-branch-name=main`
 git merge `name-of-branch-to-be-merged`
 ```
 
-Things get bit complicated when you have conflicting files in branches. Follow this guide and should be fine, it is really nice one. [Merge conflicting branches](https://sunil-dhaka.github.io/git/git-learning.html) ☿.
+Things get bit complicated when you have conflicting files in branches. Follow this guide and should be fine, it is really nice one. [Merge conflicting branches](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) ☿.
