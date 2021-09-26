@@ -68,3 +68,16 @@ Other way around, is even simpler: first create a new branch on github website r
 git branch --list # lists all branches
 
 ```
+Now to switch a particular branch and develope there, and then commit to that branch you just do nomral process that you do when committing to main branch.
+```bash
+git checkout `branch-to-switch-to`
+# do your things on branch
+git status
+# check what new is created and modified
+git add `files created new`
+# add new files
+git commit -am "your-new-changes message"
+# here with `-a` we are committing all files you can commit only modified ones by specifing
+git push
+# all up-to-date on `this branch` not on main for that need to merge
+```
