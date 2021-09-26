@@ -91,6 +91,9 @@ git push
 Now to merge your branch with main -- the original one,
 ```bash
 # go to the receiving branch
-git branch/ `receiving-branch-name`
-
+git branch `receiving-branch-name=main`
+# to merge without conflict
+git merge `name-of-branch-to-be-merged`
 ```
+
+Things get bit complicated when you have conflicting files in branches. Follow this guide and should be fine, it is really nice one. [Merge conflicting branches](https://sunil-dhaka.github.io/git/git-learning.html) ☿.
