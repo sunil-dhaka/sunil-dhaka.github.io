@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Creating this site ☻"
-date: 2021-09-23 10:53:49 +0530
-categories: learning
+date: 2021-09-23
+categories: ['learning']
+author: Sunil Dhaka Rani Malukana
 ---
 
 Hello again ☻. Here I am planning to write a journal about creating this website using jekyll. I am using linux os, and code snippets from terminal will be according to linux. So be aware. Now to install you need to type these commmands in terminal window.
@@ -92,14 +93,4 @@ kramdown:
 
 Although jekyll uses GitHub Flavored Markdown (GFM) processor by default for syntax highlighting but you can specifiy by `input: GFM`. 
 
-#### To-Dos
-
-----
-- [ ] Create a process that takes markdown posts through a spell check: maybe use a spell check plugin in your text editor
-- [ ] How to link to other files or posts/other layouts: write a *h4* for that
-- [ ] Create these pages: links, tags, categories and
-- [ ] Need to automate some other things also like: spellchecking, include text-reader, include color-line that tells how much time is remaining to complete the post
-
 [Check Out Scrapping!]({% post_url 2021-09-22-let-us-start %})
-
-
