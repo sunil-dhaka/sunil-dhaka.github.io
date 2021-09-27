@@ -198,7 +198,7 @@
 }
 
 .post-meta {
-  font-size: $small-font-size; // change this to change that date size
+  font-size: $small-font-size; // change this to change that date size in post page
   color: $grey-color;
 }
 
@@ -260,6 +260,7 @@
    height: 100px;
     object-fit: cover;
 }
+
 // css for post-page image
 .post-image{
     width: 20%;

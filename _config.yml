@@ -8,6 +8,7 @@ timezone: "Asia/Kolkata"
 
 #conversion
 markdown: kramdown
+highlighter: rouge
 # markdown processing
 kramdown:
   input: GFM
@@ -17,7 +18,7 @@ kramdown:
 #lsi: false
 #safe: true
 #incremental: false
-highlighter: rouge
+
 # site settings
 
 # author profile

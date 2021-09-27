@@ -23,7 +23,7 @@ layout: default
     {%- endif -%}
     -->
       <!--little syntax problem are really tough to work with that is why need an proper editor to sort out these mistakes-->
-    <h1 class="post-ti
+    <h1 class="post-title"></h1>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
@@ -38,7 +38,7 @@ layout: default
       {%- endfor -%}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS. Currently not available.</a></p>
   {%- endif -%}
 
 </div>
