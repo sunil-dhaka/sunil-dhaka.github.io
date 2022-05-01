@@ -1,7 +1,7 @@
 ---
-title:  ""
+title:  "working with conda environments"
 layout: post
-permalink: working with conda environments
+permalink: working-with-conda-environments
 date:   2022-05-01
 categories: ['conda']
 tags: ['conda','python']
