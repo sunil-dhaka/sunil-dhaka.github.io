@@ -52,10 +52,10 @@ destination: _site
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Git Page-Minima
-email: something@something.bs
+title: Sunil Dhaka
+email: sunild@iitk.ac.in
 description: >
-  Welcome to my jekyll site 👽! I am hopping to use this space to share things that I am learning. To be honest I don't know ⌣ for what it will be used.
+  Welcome to my website build with jekyll.
 #baseurl:
 url: "https://sunil-dhaka.github.io/"
 twitter_username: jamesbond
