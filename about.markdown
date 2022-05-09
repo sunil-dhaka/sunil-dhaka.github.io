@@ -4,4 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hello ☻! My name is Sunil Dhaka. I am a post graduate student at [IIT Kanpur](https://www.iitk.ac.in). My interest are statistics, data mining, social sciences, and computers. My passtime hobby is binge ☻ watching a good fantasy webseries. I also like to write on occasions of self-realizations or world-realizations. That is enough, I guess. Explore this website 🎬.
+Hello ☻! My name is Sunil Dhaka. I am a post graduate student at [IIT Kanpur](https://www.iitk.ac.in). 
+
+**What is this website for?**
+It is a reference website for technical things that might come handy in future myself. If it helps, then good for you.
