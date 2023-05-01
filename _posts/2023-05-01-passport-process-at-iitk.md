@@ -26,14 +26,14 @@ For students who wish to create a passport at IITK:
    - Also, take one photocopy of all documents mentioned at the end (time and money-saving tip)
    - Show photocopies of docs [sign them all] at the tatkal window and get a token number
    - Go to the first floor after getting a token, and here begins the process of waiting (mostly) and getting shit done
-        - A. Processing Unit: Original docs get scanned, photo taken, fingerprints, sign. There are two screens, and they ask you to verify your details as they are filling it. On A window, all are private employees. 
-        - B. Verification Unit: Lots of waiting, and then you go before one government official who checks your docs and judges you :)
-        - C. Granting Unit: Lots of waiting, and then once more government official checks something and grants your application for police verification
+      * A. Processing Unit: Original docs get scanned, photo taken, fingerprints, sign. There are two screens, and they ask you to verify your details as they are filling it. On A window, all are private employees. 
+      * B. Verification Unit: Lots of waiting, and then you go before one government official who checks your docs and judges you :)
+      * C. Granting Unit: Lots of waiting, and then once more government official checks something and grants your application for police verification
 - Police verification: This whole process takes about 15-20 days. The police are slow
-        - After 2-3 days of getting passport grant (an email message), some police officer calls and asks you to submit copies of docs to IIT police chocki, type-A
-        - You can check your status on the passport website
-        - Kalyanpur thana checks documents and sends a report to SP office, Kanpur Nagar
-        - SP office gets back to PSK, and all done
+   - After 2-3 days of getting passport grant (an email message), some police officer calls and asks you to submit copies of docs to IIT police chocki, type-A
+   - You can check your status on the passport website
+   - Kalyanpur thana checks documents and sends a report to SP office, Kanpur Nagar
+   - SP office gets back to PSK, and all done
 - Printing and speed post from Lucknow: 3-4 days to reach IIT sub-post office
 
 -------------
