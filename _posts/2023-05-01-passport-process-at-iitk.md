@@ -17,7 +17,7 @@ For students who wish to create a passport at IITK:
    - Go and get it from DOSA
 
 - Online application and appointment schedule: It is a standard procedure that you should be able to handle
-   - Now apply for a passport online on this [website](passportindia.gov.in/)
+   - Now apply for a passport online on this [website](https://passportindia.gov.in/)
    - Pay the amount as per the type of passport normal, tatkal, or renew, etc.
    - Schedule an appointment at [PSK, Kanpur](https://www.google.com/maps/place/Passport+Seva+Kendra,+Kanpur/@26.4744859,80.3092828,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd4c10e813c9f27:0xfe3168cc82aaaf62!8m2!3d26.4744811!4d80.3118577!16s%2Fg%2F124ygkv70)
 - Offline process at PSK: This is the most important step
