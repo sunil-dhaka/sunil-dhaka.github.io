@@ -17,7 +17,7 @@ When you try to connect to the IITK webhome server from a newer machine, you may
 To resolve this issue, you can modify your SSH configuration file to specify the key exchange and host key algorithms that your machine should offer during the SSH handshake. You can do this by adding the following lines to your SSH configuration file (usually located at `~/.ssh/config`):
 
 ```bash
-Host <iitk-webhome-ip-addr>
+Host webhome.cc.iitk.ac.in
   KexAlgorithms +diffie-hellman-group1-sha1
   HostKeyAlgorithms +ssh-dss
 ```
