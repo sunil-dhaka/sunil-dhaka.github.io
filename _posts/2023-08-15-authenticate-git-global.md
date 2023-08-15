@@ -47,3 +47,13 @@ To set up `gh` (GitHub CLI) on macOS and use it to create new repositories, add 
    - If prompted, set your git identity information (name and email) using the `git` command.
 
 With these steps, you can set up `gh` on macOS and use it to create new repositories, add files, and make commits directly from the terminal. `gh` provides a convenient command-line interface to interact with GitHub, making it easier to manage your repositories without leaving the terminal environment.
+
+5. Delete the Repository:
+   - Run the following command to delete the repository:
+     ```shell
+     gh repo delete owner/repo-name
+     ```
+     Replace `owner` with the username or organization name that owns the repository, and `repo-name` with the name of the repository you want to delete.
+   - Confirm by retyping the owner/repo-name
+
+Please exercise caution when deleting repositories, as this action is irreversible. Double-check that you have selected the correct repository before confirming the deletion.
