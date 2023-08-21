@@ -57,7 +57,7 @@ email: sunild@iitk.ac.in
 description: >
   Welcome to my website build with jekyll.
 #baseurl:
-url: "https://sunil-dhaka.github.io/"
+url: "https://sunil-dhaka.github.io"
 twitter_username: jamesbond
 github_username:  sunil-dhaka
 # jekyll have not defaulted author so to do that we add it in configuration file
