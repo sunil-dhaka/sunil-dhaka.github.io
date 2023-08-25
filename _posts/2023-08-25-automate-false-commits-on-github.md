@@ -1,7 +1,7 @@
 ---
 layout: post
 title: automate false commits on github 
-date: 2023-08-15
+date: 2023-08-25
 categories: [git]
 tags: [cli, git]
 description: false commits check for automation on gcp vm
