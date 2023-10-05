@@ -7,7 +7,6 @@ tags: [thoughts, life]
 description: there is a cost of life beyond monetary expenses 
 author: Sunil Dhaka
 ---
-
 # The True Cost of Life: Beyond Monetary Expenses
  
 > Life, a concept that has intrigued philosophers, thinkers, and ordinary folks alike for centuries. It's often said that "life is what happens when you're busy making other plans." But have you ever considered the idea that life itself might come at a cost?
