@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The True Cost of Life: Beyond Monetary Expenses
+title: The True Cost of Life Beyond Monetary Expenses
 date: 2023-10-05
 categories: [life]
 tags: [thoughts, life]
