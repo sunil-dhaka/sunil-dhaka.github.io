@@ -9,7 +9,7 @@ author: Sunil Dhaka
 ---
 
 # The True Cost of Life: Beyond Monetary Expenses
-
+ 
 > Life, a concept that has intrigued philosophers, thinkers, and ordinary folks alike for centuries. It's often said that "life is what happens when you're busy making other plans." But have you ever considered the idea that life itself might come at a cost?
 
 In a candid conversation with a friend, I was once told, **"You get life on rent."** At first, this notion seemed rather bleak and pessimistic. The implication was that life has a price tag, and to keep it going, you need to constantly pay up. It was a somber thought, one that made me ponder our society's values.
