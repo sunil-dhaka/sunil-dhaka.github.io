@@ -5,7 +5,7 @@ permalink: contact-me
 ---
 
 Sunil Dhaka\\
-IIT Kanpur, GT Road\\
-Kanpur, UP 208016
+Somewhere, on the road\\
+India
 
 ![Postcard Image]({{ site.url }}/assets/images/postcard.jpg)
