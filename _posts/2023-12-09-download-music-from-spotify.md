@@ -43,3 +43,7 @@ $ spotify_dl -l "https://open.spotify.com/playlist/your_playlist_id"
 ```
 
 Now, enjoy your music library without breaking a sweat. Happy listening! 🎵
+
+Links:
+1. [spotify web api](https://developer.spotify.com/documentation/web-api)
+2. [youtube api v3](https://developers.google.com/youtube/v3/?hl=en)]
