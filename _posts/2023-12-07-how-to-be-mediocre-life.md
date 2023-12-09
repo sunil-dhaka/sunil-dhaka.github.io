@@ -2,7 +2,7 @@
 layout: post
 title: how to be mediocre in life 
 date: 2023-12-07
-categories: [life-tips]
+categories: [life]
 tags: [life, git]
 description: just somethings I read on this webpage, https://janardhanpulivarthi.com/i/mediocre-life.html
 author: Sunil Dhaka
