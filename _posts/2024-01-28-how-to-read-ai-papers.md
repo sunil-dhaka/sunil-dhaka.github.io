@@ -5,7 +5,7 @@ date: 2024-01-28
 categories: [research]
 tags: [papers, research]
 description: some general guidlines on how to read ai papers
-author: Sunil Dhaka
+author: Bot 
 ---
 
 ### [YT video link](https://www.youtube.com/watch?v=ReIZgbCwfg0)
