@@ -5,7 +5,7 @@ date: 2024-02-23
 categories: [research]
 tags: [bot-answers, research]
 description: somethings to not about batch size and gpu
-author: Bot 
+author: Bot & Sunil Dhaka 
 ---
 
 The increase in GPU memory usage with an increase in batch size is primarily due to the computational and memory requirements of processing larger batches of data in parallel. Here's a breakdown of the key factors:
@@ -29,3 +29,8 @@ The increase in GPU memory usage with an increase in batch size is primarily due
    - The speed at which data can be transferred between the GPU's memory and the GPU cores is limited by memory bandwidth. Larger batch sizes can help to better utilize this bandwidth.
 
 It's important to note that while increasing the batch size can improve training efficiency, there is a trade-off. Very large batch sizes may lead to GPU memory exhaustion, limiting the size of models or the overall amount of data that can be processed in parallel. Finding an optimal batch size often involves experimentation and depends on the specific model, dataset, and available hardware.
+
+**Links**
+    - [gpu utilization for training LLMs](https://medium.com/@maxshapp/understanding-and-estimating-gpu-memory-demands-for-training-llms-in-practise-c5ef20a4baff)
+    - [fast-ai forum](https://forums.fast.ai/t/understanding-gpu-memory-usage/38982)
+    - [torch forum on gpu and batch size](https://discuss.pytorch.org/t/relationship-between-gpu-memory-usage-and-batch-size/132266)
