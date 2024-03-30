@@ -4,8 +4,6 @@ title: 'Contact Info'
 permalink: contact-me
 ---
 
-## Connect with Me
-
 You can find me on the following platforms:
 
 - [LinkedIn](https://www.linkedin.com/in/sunil-dhaka-55a744159)

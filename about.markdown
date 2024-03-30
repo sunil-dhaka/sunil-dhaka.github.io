@@ -6,8 +6,6 @@ permalink: /about/
 
 Hello!
 
-## About Me
-
 I hold a Bachelor's and Master's degree in Mathematics and Scientific Computing from the prestigious Indian Institute of Technology (IIT) Kanpur. I am driven by a profound passion for exploring the cutting-edge frontiers of deep learning and artificial intelligence, and I am continuously captivated by the potential of these technologies to solve complex real-world problems.
 
 One of my greatest joys lies in immersing myself in the latest research papers within the realms of AI, Machine Learning, and Data Science. I am endlessly fascinated by the rapid pace of innovation and the boundless possibilities that these fields offer.
