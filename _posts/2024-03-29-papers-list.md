@@ -8,57 +8,34 @@ description: Ultimate target is to make it as much as possible like a curated li
 author: Sunil Dhaka 
 ---
 
+# some papers
+	To be updated
+	<!-- [Attention is all you need]()
+	[Simple and Controllable Music Generation](Simple and Controllable Music Generation) -->
+
+
 # some blogs
+	Lil'log
+	Jay Alammar
+	Andrej Karpathy
+	Colah's Blog
+	ML@Berkely
+	AI Summer
+	Blog pages of Deepmind, OpenAI labs
 
-Lilian: Lil'log
-Jay Alammar
-Andrej Karpathy
-Colah's Blog
-ML@Berkely
-AI Summer
-Deepmind, OpenAI such labs blog pages
-
-# websites to hunt papers, use their filters to get to specific things
-- openreview.net
-- arxiv.org
-- google-scholar
+# websites to hunt papers
+	openreview.net
+	arxiv.org
+	google-scholar
 
 # some researchers to follow
-	- Jurgen Schmidhuber
-	- Andrej Karpathy
-	- Ilya Sutskever
-	- Ian Goodfellow
-	- Yann Lecun
-	- Yoshua Bengio
-	- Geoffrey Hinton
-	- Alexi Efros
-	- Andrew Ng
-	- Sharon Zhou
-
-# on gans to backup
-
-Papers
-	- DCGAN
-	- TGAN
-	- WGAN
-	- SNGAN
-	- Controllable GAN paper
-
-Concepts
-	- AE and VAE
-	- BCE
-	- Activation Functions: ReLU, Leaky ReLU, Sigmoid, Tanh
-	- Batch Norm
-		○ Covariate shift
-		○ Internal Covariate Shift
-	- Convolutions
-		○ Padding, stride
-		○ Pooling, upsampling
-		○ Transposed convolution
-			§ https://distill.pub/2016/deconv-checkerboard/
-	- W loss
-		○ Earth Mover distance
-		○ Problems of BCE loss
-		
-		
-
+	Jurgen Schmidhuber
+	Andrej Karpathy
+	Ilya Sutskever
+	Ian Goodfellow
+	Yann Lecun
+	Yoshua Bengio
+	Geoffrey Hinton
+	Alexi Efros
+	Andrew Ng
+	Sharon Zhou
