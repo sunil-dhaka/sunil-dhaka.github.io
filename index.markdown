@@ -4,5 +4,3 @@
 list_title: Posts
 layout: home
 ---
-
-<hr style="border:2px solid">

@@ -18,12 +18,10 @@ permalink: /work/
 ---
 
 ## [SATHEE, Ministry of Education of India](https://sathee.prutor.ai/)   
-<h3 align="left"> Summer Research Intern <span style="float:right;">Mar, 22 - June, 22</span></h3> 
+<h4 align="left"> Summer Research Intern <span style="float:right;">Mar, 22 - June, 22</span></h4> 
 **Project :** Creating content recommendation system.
-- Research on recommendation algorithms, specializing in collaborative filtering and content-based methods.
-- Collaborated with cross-functional teams to integrate recommendation engines into educational platform of SATHEE.
-- Conducted A/B testing to evaluate the effectiveness of recommendation strategies.
-- Also worked as TA for SATHEE project, an NTA and IITK endeavour to increase without coaching students in IITs.
-- Created 600+ relevant problems, essential formulae and tips & tricks sheets for JEE aspirants to practice.
+- Researched on recommendation algorithms, specializing in collaborative filtering and content-based methods. Implemented these ensemble of models in pytorch.
+- Collaborated with cross-functional teams to integrate recommendation engines into educational platform of SATHEE. Conducted A/B testing to evaluate the effectiveness of recommendation strategies.
+- Also worked as TA for SATHEE project, an NTA and IITK endeavour to increase without coaching students in IITs. Created 600+ relevant problems, essential formulae and tips & tricks sheets for JEE aspirants to practice.
 {: style="text-align: justify"}
 ---
