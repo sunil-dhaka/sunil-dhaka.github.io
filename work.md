@@ -27,7 +27,7 @@ permalink: /work/
 ---
 
 ## [RSK, Unnat Bharat Abhiyan ](https://rsk.iitk.ac.in/)   
-<h4 align="left"> Student Coordinator, Teacher, Content Creator and Organizor <span style="float:right;">Mar, 22 - June, 22</span></h4> 
+<h4 align="left"> Student Coordinator, Teacher, Content Creator and Organizor <span style="float:right;">Apr, 22 - May, 23</span></h4> 
 **Project :** Learning to teach, create material and organize
 - Volunteered as a science and math tutor, working closely with rural government school children, utilizing interactive experiments to enhance learning experiences.
 - Developed a comprehensive educational resource website and facilitated brainstorming sessions to improve the quality of education for underprivileged children.
