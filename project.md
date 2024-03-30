@@ -7,12 +7,6 @@ permalink: /projects/
 Some of my projects done during my time at IITK
 <hr style="border:2px solid">
 
-### [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/)   
-<h4 align="left">Under B.V. Rathish Kumar, MTH, IIT Kanpur <span style="float:right;">Jan '22 - Apr '22</span></h4> 
--
-{: style="text-align: justify"}
----
-
 ### [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/IR-Project)   
 <h4 align="left">Under Prof. Arnab Bhattacharya, CSE, IIT Kanpur <span style="float:right;">Jan '22 - Apr '22</span></h4> 
 - Implemented and fine-tuned text summarization algorithms like **TextRank, LSA, Google PEGASUS, t5-small**
