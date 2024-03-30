@@ -7,7 +7,7 @@ permalink: /projects/
 Some of my projects done during my time at IITK
 <hr style="border:2px solid">
 
-## [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/IR-Project)   
+### [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/IR-Project)   
 <h4 align="left">Under Prof. Arnab Bhattacharya, CSE, IIT Kanpur <span style="float:right;">Jan '22 - Apr '22</span></h4> 
 - Implemented and fine-tuned text summarization algorithms like TextRank, LSA, Google PEGASUS, t5-small
 - Preprocessed corpora using a variety of NLP techniques like tokenization, stemming, lemmatization
@@ -17,7 +17,7 @@ Some of my projects done during my time at IITK
 {: style="text-align: justify"}
 ---
 
-## [Racial Disparity in COVID-19 Vaccination in US](https://github.com/sunil-dhaka/ime692-project)   
+### [Racial Disparity in COVID-19 Vaccination in US](https://github.com/sunil-dhaka/ime692-project)   
 <h4 align="left">Under Prof. Shankar Prawesh, IME, IIT Kanpur <span style="float:right;">Aug '21 - Nov '21</span></h4> 
 - Analysed vaccination rates for **covid-19 by race in US counties**, along with their association with socioeconomic factors, using a number of statistical techniques
 - Transformed and pre-processed data by **z-score** normalization and **PCA** dimension reduction of feature matrix
@@ -27,7 +27,7 @@ Some of my projects done during my time at IITK
 ---
 
 
-## [Indian Agriculture Data Mining](https://github.com/sunil-dhaka/Agriculture-Analysis-on-Indian-States)   
+### [Indian Agriculture Data Mining](https://github.com/sunil-dhaka/Agriculture-Analysis-on-Indian-States)   
 <h4 align="left">Under Prof. Arnab Bhattacharya, IME, IIT Kanpur <span style="float:right;">Aug '21 - Nov '21</span></h4> 
 - Analysed **seasonal crop data** for last 20 years and unearthed surprising information about the Indian agricultural
 - Pre-processed 2.5 lakh data points using **cleaning techniques** to get robust dataset for subsequent steps
@@ -37,7 +37,7 @@ Some of my projects done during my time at IITK
 ---
 
 
-## [Repelling–Attracting Metropolis Algorithm](https://github.com/sunil-dhaka/RAM)   
+### [Repelling–Attracting Metropolis Algorithm](https://github.com/sunil-dhaka/RAM)   
 <h4 align="left">Under Prof. Dootika Vats, MTH, IIT Kanpur <span style="float:right;">Jan '21 - Apr '21</span></h4> 
 - Implemented tweaked version of MH algorithm called Repelling–Attracting Metropolis Algorithm (RAM) for multi-modality
 - Used Auxiliary Variable approach to derive the steps of the algorithm
@@ -46,7 +46,7 @@ Some of my projects done during my time at IITK
 {: style="text-align: justify"}
 ---
 
-## [Modelling and Forecasting of Time Series Data](https://github.com/sunil-dhaka/time-series-model)   
+### [Modelling and Forecasting of Time Series Data](https://github.com/sunil-dhaka/time-series-model)   
 <h4 align="left">Under Prof. Amit Mitra, MTH, IIT Kanpur <span style="float:right;">Sep '20 - Nov '20</span></h4> 
 - Modeled a **seasonal ARIMA model** to forecast next year's temperatures based on historical data
 - Checked data stationarity through **Dickey-Fuller test**, and performed seasonal differencing to ensure stationary TS
@@ -56,7 +56,7 @@ Some of my projects done during my time at IITK
 {: style="text-align: justify"}
 ---
 
-## [Expectation-Maximization \& Metropolis-Hastings Algorithms](https://github.com/sunil-dhaka/)   
+### [Expectation-Maximization \& Metropolis-Hastings Algorithms](https://github.com/sunil-dhaka/)   
 <h4 align="left">Under Prof. Dootika Vats, MTH, IIT Kanpur <span style="float:right;">Aug '19 - Nov '19</span></h4> 
 - Developed expectation-maximization (EM) algorithms to fit multivariate Gaussian mixture models for latent variables
 - Cross-validated the model on test data to determine optimum values of hyperparameters
@@ -64,7 +64,7 @@ Some of my projects done during my time at IITK
 {: style="text-align: justify"}
 ---
 
-## [Critical Comparative Appraisal of Monetary Policy Tools and Strategies](https://github.com/sunil-dhaka/)   
+### [Critical Comparative Appraisal of Monetary Policy Tools and Strategies](https://github.com/sunil-dhaka/)   
 <h4 align="left">Under Prof. Sukumar Vellakkal, ECO, IIT Kanpur <span style="float:right;">Aug '21 - Nov '21</span></h4> 
 - Conducted structural comparison of monetary authorities in India and the United States
 - Compared monetary policies of these countries including reserve requirements, discount rate, and open market operations
