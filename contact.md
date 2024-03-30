@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Send me a postcard!'
+title: 'Contact Info'
 permalink: contact-me
 ---
 
