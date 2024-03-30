@@ -53,13 +53,14 @@ destination: _site
 # in the templates via {{ site.myvariable }}.
 
 title: Sunil Dhaka
-email: sunild@iitk.ac.in
+email: sunil.dhaka.iitk@gmail.com
 description: >
-  Welcome to my website build with jekyll.
+  Have a peek around. If you have anything to say, please get in touch via any contact medium.
 #baseurl:
 url: "https://sunil-dhaka.github.io"
-twitter_username: jamesbond
+linkdin_username:  sunil-dhaka-55a744159
 github_username:  sunil-dhaka
+
 # jekyll have not defaulted author so to do that we add it in configuration file
 author: Sunil Dhaka
 
