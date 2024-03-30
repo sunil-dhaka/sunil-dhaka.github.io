@@ -7,17 +7,23 @@ permalink: /projects/
 Some of my projects done during my time at IITK
 <hr style="border:2px solid">
 
-### [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/IR-Project)   
-<h4 align="left">Under Prof. Arnab Bhattacharya, CSE, IIT Kanpur <span style="float:right;">Jan '22 - Apr '22</span></h4> 
-- Implemented and fine-tuned text summarization algorithms like TextRank, LSA, Google PEGASUS, t5-small
-- Preprocessed corpora using a variety of NLP techniques like tokenization, stemming, lemmatization
-- Used ROUGE-N to evaluate accuracy of machine summaries against human summaries for corpus of size 230k
-- Tested out algorithms and achieved SOTA f1-scores on our datasets for abstractive algorithms after fine-tuning
-- Created a Flask web application for users to interact with the algorithms and get summaries of articles or blogs
+### [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/)   
+<h4 align="left">Under B.V. Rathish Kumar, MTH, IIT Kanpur <span style="float:right;">Jan '22 - Apr '22</span></h4> 
+-
 {: style="text-align: justify"}
 ---
 
-### [Racial Disparity in COVID-19 Vaccination in US](https://github.com/sunil-dhaka/ime692-project)   
+### [Relevant Information Retrieval from Text Documents](https://github.com/sunil-dhaka/IR-Project)   
+<h4 align="left">Under Prof. Arnab Bhattacharya, CSE, IIT Kanpur <span style="float:right;">Jan '22 - Apr '22</span></h4> 
+- Implemented and fine-tuned text summarization algorithms like **TextRank, LSA, Google PEGASUS, t5-small**
+- Preprocessed corpora using a variety of NLP techniques like **tokenization, stemming, lemmatization**
+- Used **ROUGE-N** to evaluate accuracy of machine summaries against human summaries for corpus of size **230k**
+- Tested out algorithms and achieved **SOTA f1-scores on our datasets** for abstractive algorithms after fine-tuning
+- Created a **Flask web application** for users to interact with the algorithms and get summaries of articles or blogs
+{: style="text-align: justify"}
+---
+
+### [Racial Disparity in COVID-19 Vaccination in US](https://github.com/sunil-dhaka/racial-disparity-project)   
 <h4 align="left">Under Prof. Shankar Prawesh, IME, IIT Kanpur <span style="float:right;">Aug '21 - Nov '21</span></h4> 
 - Analysed vaccination rates for **covid-19 by race in US counties**, along with their association with socioeconomic factors, using a number of statistical techniques
 - Transformed and pre-processed data by **z-score** normalization and **PCA** dimension reduction of feature matrix
@@ -36,16 +42,6 @@ Some of my projects done during my time at IITK
 {: style="text-align: justify"}
 ---
 
-
-### [Repelling–Attracting Metropolis Algorithm](https://github.com/sunil-dhaka/RAM)   
-<h4 align="left">Under Prof. Dootika Vats, MTH, IIT Kanpur <span style="float:right;">Jan '21 - Apr '21</span></h4> 
-- Implemented tweaked version of MH algorithm called Repelling–Attracting Metropolis Algorithm (RAM) for multi-modality
-- Used Auxiliary Variable approach to derive the steps of the algorithm
-- Demonstrated how the RAM model outperforms the MH sampler, by generating MCMC samples for real-life numerical examples like sensor network localization, strong lens time delay estimation
-- RAM provided better simulations for multimodal distributions, as seen by ACF plots, trace plots, acceptance rate and downhill-uphill average proposal numbers of generated samples
-{: style="text-align: justify"}
----
-
 ### [Modelling and Forecasting of Time Series Data](https://github.com/sunil-dhaka/time-series-model)   
 <h4 align="left">Under Prof. Amit Mitra, MTH, IIT Kanpur <span style="float:right;">Sep '20 - Nov '20</span></h4> 
 - Modeled a **seasonal ARIMA model** to forecast next year's temperatures based on historical data
@@ -56,7 +52,18 @@ Some of my projects done during my time at IITK
 {: style="text-align: justify"}
 ---
 
-### [Expectation-Maximization \& Metropolis-Hastings Algorithms](https://github.com/sunil-dhaka/)   
+
+### [Repelling–Attracting Metropolis Algorithm](https://github.com/sunil-dhaka/RAM)   
+<h4 align="left">Under Prof. Dootika Vats, MTH, IIT Kanpur <span style="float:right;">Jan '21 - Apr '21</span></h4> 
+- Implemented tweaked version of MH algorithm called Repelling–Attracting Metropolis Algorithm (RAM) for multi-modality
+- Used Auxiliary Variable approach to derive the steps of the algorithm
+- Demonstrated how the RAM model outperforms the MH sampler, by generating MCMC samples for real-life numerical examples like sensor network localization, strong lens time delay estimation
+- RAM provided better simulations for multimodal distributions, as seen by ACF plots, trace plots, acceptance rate and downhill-uphill average proposal numbers of generated samples
+{: style="text-align: justify"}
+---
+
+
+### [Expectation-Maximization & Metropolis-Hastings Algorithms](https://github.com/sunil-dhaka/)   
 <h4 align="left">Under Prof. Dootika Vats, MTH, IIT Kanpur <span style="float:right;">Aug '19 - Nov '19</span></h4> 
 - Developed expectation-maximization (EM) algorithms to fit multivariate Gaussian mixture models for latent variables
 - Cross-validated the model on test data to determine optimum values of hyperparameters

@@ -22,6 +22,6 @@ permalink: /work/
 **Project :** Creating content recommendation system.
 - Researched on recommendation algorithms, specializing in collaborative filtering and content-based methods. Implemented these ensemble of models in pytorch.
 - Collaborated with cross-functional teams to integrate recommendation engines into educational platform of SATHEE. Conducted A/B testing to evaluate the effectiveness of recommendation strategies.
-- Also worked as TA for SATHEE project, an NTA and IITK endeavour to increase without coaching students in IITs. Created 600+ relevant problems, essential formulae and tips & tricks sheets for JEE aspirants to practice.
+- Also worked as TA for SATHEE project, a NTA, MHRD and IITK endeavour to increase without coaching students in IITs. Created 600+ relevant problems, essential formulae and tips & tricks sheets for JEE aspirants to practice.
 {: style="text-align: justify"}
 ---

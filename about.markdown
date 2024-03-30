@@ -6,14 +6,11 @@ permalink: /about/
 
 Hello!
 
-I hold a Bachelor's and Master's degree in Mathematics and Scientific Computing from the prestigious Indian Institute of Technology (IIT) Kanpur. I am driven by a profound passion for exploring the cutting-edge frontiers of deep learning and artificial intelligence, and I am continuously captivated by the potential of these technologies to solve complex real-world problems.
+I hold a Bachelor's and Master's degree in Mathematics and Statistics from IIT Kanpur. Passionate in exploring the cutting-edge frontiers of deep learning and artificial intelligence, and the potential of these technologies to solve complex real-world problems. I love to read latest reserach papers in AI, ML, and Data Science fields. Truly fasinated with the boundless possibilities that these fields offer. Details about my project, work experience, resume and some interesting blogs, you can find on this webpage.
 
-One of my greatest joys lies in immersing myself in the latest research papers within the realms of AI, Machine Learning, and Data Science. I am endlessly fascinated by the rapid pace of innovation and the boundless possibilities that these fields offer.
+Reserach interests: Artificial Intelligence, Natural Language Processing, Computer Vision, Data Structures and Algorithms, as well as Mathematics and Statistics.
 
-My work interests are deeply rooted in the domains of Artificial Intelligence, Natural Language Processing, Computer Vision, Data Structures and Algorithms, as well as Mathematics and Statistics. I am constantly seeking opportunities to expand my knowledge and contribute to the ever-evolving landscape of these disciplines.
-
-You can find detailed information about my Projects, Work Experiences, Resume, and insightful blogs on this website. I invite you to explore these resources to gain a comprehensive understanding of my expertise and experience.
-
+Cheers!
 
 **What is this website for?**
 
