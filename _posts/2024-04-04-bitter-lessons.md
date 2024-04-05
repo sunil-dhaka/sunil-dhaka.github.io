@@ -1,6 +1,6 @@
 ---
 layout: post
-title: bitter lessons 
+title: bitter lessons on AI 
 date: 2024-04-05
 categories: [research]
 tags: [papers, research]
