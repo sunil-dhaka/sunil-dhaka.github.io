@@ -6,9 +6,15 @@ permalink: /work/
 
 <hr style="border:2px solid">
 
+## [KickFurther, Boulder, CO(Remote)](https://www.kickfurther.com/)   
+<h4 align="left"> Data Scientist <span style="float:right;">April, 24 - Present</span></h4> 
+<!-- **Project :**  Data Science -->
+<!-- - Working on Data Science Stuff -->
+{: style="text-align: justify"}
+---
 
 ## [ZEE5, Bangalore](https://www.zee5.com/)   
-<h4 align="left"> Data Scientist <span style="float:right;">June, 23 - Present</span></h4> 
+<h4 align="left"> Associate Data Scientist <span style="float:right;">June, 23 - April, 24</span></h4> 
 **Project :**  Creating the first ever Music FMM of India
 - Engineered in-house large music model with **3.3B parameters**, trained on diverse 5.3K+ hrs of music data.
 - Utilized deep learning to develop a robust architecture with 50+ **instrument specialized Nano models**.
