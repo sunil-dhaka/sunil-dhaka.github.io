@@ -14,6 +14,9 @@ author: Bot
 
 # How to Read a Paper: A Comprehensive Guide
 
+![Reading Papers](how_to_read_papers.png)
+
+
 Reading research papers can be a daunting task, especially for those new to a field. This guide aims to provide a step-by-step approach to make the process more accessible. Whether you're skimming for relevance, leveling up for inspiration, or diving deep for implementation details, this guide has got you covered.
 
 ## Skimming: Understanding the Basics
