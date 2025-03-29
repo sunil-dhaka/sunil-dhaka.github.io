@@ -2,13 +2,14 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "Courier New", Courier, "Lucida Console", "American Typewriter", monospace !default;
-$base-font-size:   16px !default;
+// Using more authentic typewriter fonts with fallbacks
+$base-font-family: "Special Elite", "American Typewriter", "Courier Prime", "Courier New", Courier, monospace !default;
+$base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     28px !default;
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default; // try #eee & #eef or other colors

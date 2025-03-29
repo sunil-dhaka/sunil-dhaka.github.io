@@ -1,0 +1,25 @@
+---
+---
+
+@import "minima";
+
+/* Enhanced Typewriter Styling */
+body {
+  letter-spacing: -0.5px;
+  font-family: "Special Elite", "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
+}
+
+p {
+  line-height: 1.65;
+}
+
+/* Slight irregularity in character positioning to simulate mechanical typewriter */
+.post-content p, .post-content li {
+  word-spacing: 0.1em;
+  text-shadow: 1px 0px 0px rgba(0,0,0,0.05);
+}
+
+/* Slightly uneven text to mimic the imperfections of typewritten text */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 1px 0px 0px rgba(0,0,0,0.2);
+}
