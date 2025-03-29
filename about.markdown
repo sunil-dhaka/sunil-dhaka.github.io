@@ -6,9 +6,9 @@ permalink: /about/
 
 Hello!
 
-Bachelor’s and Master’s degrees in Mathematics and Statistics and Minor in Machine Learning(CSE) from IIT Kanpur. Keenly interested in the latest advancements in deep learning and artificial intelligence, and their application to real-world challenges. I enjoy staying updated with research in AI/ML/Data Science. Enthusiastic about the endless possibilities these fields present. More information about my projects, work experience, resume, and blogs can be found on my webpage.
+Math & Stats grad from IIT Kanpur with a Machine Learning minor. I'm into all things AI and deep learning - always curious about what's next in the field. I love tinkering with new ML/AI tech and seeing how it can solve real problems. Check out my projects, work experience, and thoughts in the blog section.
 
-**Interests:** Machine Learning, Artificial Intelligence, Deep Learning, Natural Language Processing, Computer Vision, Data Structures and Algorithms Mathematics and Statistics.
+**Interests:** ML/AI, NLP, Computer Vision, Algorithms, Math & Stats
 
 Cheers!
 
