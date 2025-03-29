@@ -1,149 +1,113 @@
 ---
 layout: post
-title: how to read ai papers 
+title: Mastering AI Research Papers - A Practical Guide
 date: 2024-01-28
-categories: [research]
-tags: [papers, research]
-description: some general guidlines on how to read ai papers
-author: Bot 
+categories: ['research']
+tags: ['ai']
+description: How to approach and understand complex AI research papers
+author: Sunil Dhaka
 ---
 
-### [YT video link](https://www.youtube.com/watch?v=ReIZgbCwfg0)
+### [Original video guide](https://www.youtube.com/watch?v=ReIZgbCwfg0)
 
----
+# Breaking Down AI Papers: A Practical Approach
 
-# How to Read a Paper: A Comprehensive Guide
+Ever opened an AI research paper and felt completely overwhelmed? You're not alone. The dense equations, specialized terminology, and complex diagrams can make even experienced practitioners doubt themselves. I've developed a systematic approach that's helped me go from intimidated to informed, and I'm excited to share it with you.
 
-![Reading Papers](how_to_read_papers.png)
+## A Three-Level Strategy
 
+I've found that approaching papers in three distinct phases works best:
 
-Reading research papers can be a daunting task, especially for those new to a field. This guide aims to provide a step-by-step approach to make the process more accessible. Whether you're skimming for relevance, leveling up for inspiration, or diving deep for implementation details, this guide has got you covered.
+1. **Skimming**: Getting the gist without getting lost in details
+2. **Leveling Up**: Building a deeper understanding of the approach
+3. **Deep Dive**: Truly mastering the methods and implementation
 
-## Skimming: Understanding the Basics
+Let's break down each phase.
 
-### 1. **Start with the Abstract:**
-   - Identify the problem the paper addresses.
-   - Understand the approach and the proposed solution.
+## Skimming: Getting Your Bearings
 
-### 2. **Eye-Catching Figures:**
-   - Look for a pull figure, typically the first visual element.
-   - Gain a general sense of the paper's narrative from figures.
+### 1. **Start with the Abstract**
+The abstract packs essential information in a few sentences:
+- What problem does the paper tackle?
+- What's the proposed solution?
+- What results make this work significant?
 
-### 3. **Introduction and Figures:**
-   - Read the introduction to understand the problem's importance.
-   - Jump between figures and text to comprehend the approach.
+This gives you context for everything that follows.
 
-### 4. **Samples:**
-   - Check the samples in the appendix to assess the method's performance.
-   - Understand the diversity of datasets used.
+### 2. **Focus on the Figures**
+A quick visual tour can work wonders:
+- Look for the "pull figure" (usually Figure 1) that shows the high-level approach
+- Scan other figures to understand the method's flow
+- Check result visualizations to gauge performance
 
-## Leveling Up: Summarizing and Framing
+### 3. **Introduction and Figures Together**
+Now read the introduction while referencing the figures:
+- Understand why the problem matters
+- Identify what previous approaches were missing
+- Grasp how the new method addresses these limitations
+
+### 4. **Sample the Results**
+Jump to the appendix or results section:
+- What datasets did they use?
+- How diverse are the test samples?
+- Do the results look impressive to your trained eye?
+
+If what you've seen so far doesn't seem relevant or impressive, you can stop here without investing more time.
+
+## Leveling Up: Building Understanding
+
+Ready to go deeper? Now we'll build a stronger mental model:
 
 ### 1. **Related Work:**
-   - Explore related work to understand the broader context.
-   - Discover how the paper fits into the subfield.
+- See how this research fits into the larger field
+- Identify which previous papers might be worth reading
+- Understand what's truly novel versus incremental improvements
 
-### 2. **Tweet-Size Summary:**
-   - Summarize the introduction and methods in a tweet-sized format.
-   - Focus on the problem, the solution, and key components.
+### 2. **Method Section:**
+- Focus on the high-level architecture first
+- Note the key equations but don't get bogged down
+- Pay special attention to any algorithms presented in pseudocode
 
-### 3. **Figures and Text Interaction:**
-   - Continuously jump between figures and text to solidify understanding.
-   - Look for narrative cohesion between the introduction and methods.
+### 3. **Results and Ablations:**
+- What baseline methods did they compare against?
+- Which components of their approach contribute most to performance?
+- Are there failure cases or limitations they acknowledge?
 
-## Deep Dive: Implementing and Understanding
+### 4. **Conclusion and Future Work:**
+- What do the authors see as their main contribution?
+- What limitations do they acknowledge?
+- What directions do they suggest for future research?
+
+## Deep Dive: Mastering the Details
+
+For papers directly relevant to your work, it's worth going all the way:
 
 ### 1. **Model Diagrams:**
-   - Examine model diagrams to understand the overall pipeline.
-   - Focus on figures illustrating the architecture.
+- Study the architecture diagrams in detail
+- Make sure you understand each component's purpose
+- Try to mentally trace how data flows through the system
 
 ### 2. **Code Exploration:**
-   - Check if there's an official repository for the paper.
-   - Read the code file by file or even line by line.
-   - Look for demos if available.
+- Find the official implementation if available
+- Read through key parts of the code line-by-line
+- Look for demos or notebooks that demonstrate usage
 
-### 3. **Appendix Scavenging:**
-   - Investigate the appendix for hyperparameters and experiment details.
-   - Find algorithmic sections for a step-by-step understanding.
+### 3. **Appendix Mining:**
+- Check for hyperparameters and training details
+- Look for additional experiments not in the main paper
+- Find algorithmic details that clarify the implementation
 
-## Final Tips:
+## Final Tips for Success
 
-- **Check Archive for Appendices:**
-  - Sometimes, appendices might not be attached. Archive often contains complete versions.
+- **Check arXiv for Appendices:** Sometimes the full appendix is only in the complete version.
 
-- **Enjoy the Process:**
-  - Reading papers can be enjoyable as you gain expertise and see how concepts evolve across papers.
+- **Embrace the Challenge:** Reading papers gets easier with practice as you build up background knowledge.
 
----
+- **Start with Surveys:** If you're new to a field, survey papers can provide crucial context.
 
-# Summary
+- **Follow Citation Trails:** Found a great paper? See what papers it cites and what papers cite it.
 
-### Introduction:
+- **Join Reading Groups:** Discussing papers with others often reveals insights you missed.
 
-- **Purpose of Reading Papers:**
-  - Understand how to read a paper, especially when accessible materials are limited.
-  - Papers may be written more to sound smart than to be easily understood.
-
-- **Approach:**
-  - Decoding complex papers to understand their content.
-  - Encouragement not to feel intimidated if the paper is not immediately clear.
-
-### Searching for a Paper:
-
-- **Using Google Scholar:**
-  - Critical to get keywords right.
-  - Utilize the "cited by" links to explore related papers.
-  - Filter results based on publication date.
-
-### Skimming a Paper:
-
-- **Abstract Reading:**
-  - Identify the problem the paper is addressing.
-  - Understand the approach in broad terms.
-
-- **Examining Figures:**
-  - Focus on "pull figures" to grasp the paper's essence.
-  - Consider figures as "eye candy" for a visual understanding.
-  - Question marks are okay if certain details are unclear.
-
-### Reading Introduction and Figures:
-
-- **Reading Introduction:**
-  - Understand why the problem addressed is important and challenging.
-  - Get introduced to the paper's methods.
-
-- **Focusing on Figures:**
-  - Dive into visual representations, especially model diagrams.
-  - Jump between text and figures to gain a comprehensive understanding.
-
-### Leveling Up:
-
-- **Exploring Related Work:**
-  - Necessary for unfamiliar sub-areas.
-  - Helps in understanding the broader context of the paper.
-
-- **Summarization:**
-  - Summarize the introduction and methods in tweet-sized bytes.
-  - Helps in articulating the problem and the paper's proposed solution.
-
-### Deep Dive:
-
-- **Understanding the Model:**
-  - Focus on model diagrams and pipeline representation figures.
-  - Compare paper information side-by-side with the code.
-  - Scavenge appendices for hyperparameters and additional details.
-
-### Conclusion:
-
-- **Enjoying Paper Reading:**
-  - Reading papers can become enjoyable and informative.
-  - Expertise in a specific field can be developed by sampling and understanding various papers.
-
-### General Advice:
-
-- **Question Marks:**
-  - It's okay to have question marks while reading; it's part of the process.
-  
-- **Appendix Exploration:**
-  - The appendix often contains valuable information, including hyperparameters.
+What strategies have you found helpful for tackling complex research papers? I'd love to hear your approaches in the comments!
 

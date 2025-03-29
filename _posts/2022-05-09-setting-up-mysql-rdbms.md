@@ -1,40 +1,131 @@
 ---
-title: "setting up mysql rdbms"
 layout: post
-permalink: setting-up-mysql-rdbms
-date:   2022-05-09
-categories: ['mysql','sql']
-tags: ['mysql','sql']
+title: Setting Up MySQL on macOS - A Beginner's Guide
+date: 2022-05-09
+categories: ['database']
+tags: ['mysql']
+description: A step-by-step guide to installing and configuring MySQL on macOS
 author: Sunil Dhaka
 ---
-Here is helpful tips when you are working with mysql in linux. 
-- installing mysql in ubuntu
-```bash
-sudo apt install mysql-server
-```
-- install sequre mysql server installation: to prop it with user and passwd
-```bash
-sudo mysql_secure_installation
-```
-above prompts to set password for server, and then prompts for bunch of other question, just press yes
-	- Remove anonymous users? (Press y/Y for Yes, any other key for No) : y
-	- Disallow root login remotely? (Press y/Y for Yes, any other key for No) : y
-	- Remove test database and access to it? (Press y/Y for Yes, any other key for No) : y
-	- Reload privilege tables now? (Press y/Y for Yes, any other key for No) : y
 
-- start server and retriev queries
+# Getting Started with MySQL on macOS
+
+Diving into databases? MySQL is one of the most popular open-source relational database systems out there, and setting it up on macOS is surprisingly straightforward. Let me walk you through the process I use to get MySQL up and running.
+
+## Installing MySQL with Homebrew
+
+The easiest way to install MySQL on macOS is through Homebrew. If you don't have Homebrew installed yet, start with:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once you have Homebrew ready, installing MySQL takes just one command:
+
+```bash
+brew install mysql
+```
+
+## Starting MySQL Service
+
+After installation, you'll want to start the MySQL service:
+
+```bash
+brew services start mysql
+```
+
+This command ensures MySQL runs in the background and automatically starts when you boot your Mac.
+
+## Securing Your MySQL Installation
+
+Fresh installations of MySQL have no root password by default—not exactly secure! Let's fix that by running the security script:
+
+```bash
+mysql_secure_installation
+```
+
+You'll be guided through several security questions:
+- Setting a root password (highly recommended)
+- Removing anonymous users
+- Disallowing remote root login
+- Removing test databases
+- Reloading privilege tables
+
+I typically answer "Y" to all these to create a more secure setup.
+
+## Logging In to MySQL
+
+Now you can log in to your MySQL server:
+
 ```bash
 mysql -u root -p
-# this asks for password and all set
 ```
----
-- how to load csv files into tables
-	- first create table with cols and their appropriate types that are in csv file
-	- now to load data we do this
+
+Enter the password you just created in the secure installation step.
+
+## Creating Your First Database
+
+Once you're logged in, let's create a database:
+
 ```sql
-LOAD DATA LOCAL INFILE 'path_to_csv_file' INTO TABLE table_name FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+CREATE DATABASE my_first_db;
 ```
-	- but if things are not set correctly, it will throw previlage errors
-	- one needs to allow local file load permissions to both cliend and server sides
-	- to do that set global local_infile = 1 and when starting new sql session strt it with --local-infile=1 option 
-	- one can also enable local-inflie in mysql config file 
+
+To verify it was created:
+
+```sql
+SHOW DATABASES;
+```
+
+You should see your new database in the list.
+
+## Creating a New User
+
+Working as root all the time isn't the best practice. Let's create a regular user:
+
+```sql
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';
+```
+
+Remember to use a strong password!
+
+## Granting Permissions
+
+Now give your new user some permissions:
+
+```sql
+GRANT ALL PRIVILEGES ON my_first_db.* TO 'myuser'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+## Stopping MySQL Service
+
+When you're done working with MySQL and want to free up resources:
+
+```bash
+brew services stop mysql
+```
+
+## Troubleshooting Common Issues
+
+### Can't Connect to Server
+If you see "Can't connect to local MySQL server through socket," try:
+```bash
+brew services restart mysql
+```
+
+### Reset Root Password
+Forgot your password? You'll need to:
+1. Stop MySQL: `brew services stop mysql`
+2. Start in safe mode: `mysqld_safe --skip-grant-tables`
+3. In another terminal: `mysql -u root`
+4. Reset the password:
+   ```sql
+   USE mysql;
+   UPDATE user SET authentication_string=PASSWORD('new_password') WHERE User='root';
+   FLUSH PRIVILEGES;
+   EXIT;
+   ```
+5. Stop the safe mode instance and restart normally.
+
+Setting up a MySQL database might seem intimidating at first, but once you get the hang of it, you'll find it's a powerful tool for your development projects. What are you building with MySQL?

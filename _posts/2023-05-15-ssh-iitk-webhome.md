@@ -1,27 +1,101 @@
 ---
-title: "ssh into iitk webhome"
+title: "Connecting to IITK Webhome via SSH"
 layout: post
-permalink: ssh-into-iitk-webhome 
+permalink: ssh-iitk-webhome
 date: 2023-05-15
-categories: ['ssh']
-tags: ['ssh']
+categories: ['campus']
+tags: ['tech']
 author: Sunil Dhaka
 ---
 
-The Secure Shell (SSH) protocol is widely used to provide secure and encrypted communication between two remote systems. One of the key aspects of SSH is to establish a secure connection between the client and the server. This connection relies on cryptographic keys to provide secure communication, which involves key exchange and authentication. However, some older SSH implementations may have vulnerabilities that can be exploited by attackers. This is why it's essential to keep the SSH protocol and its components up to date.
+# Seamlessly Connect to Your IITK Web Home
 
-At IIT Kanpur webhome server, there is an issue with the key exchange (KEX) algorithm and host key algorithm, which can result in connection errors when trying to establish an SSH connection from a newer machine. The server uses an older version of SSH, which may not support newer key exchange and host key algorithms.
+Ever needed to update your IITK personal webpage but found the process clunky? Using SSH to connect directly to your web home space can save you tons of time. Here's how I set it up, with a few tricks I've learned along the way.
 
-When you try to connect to the IITK webhome server from a newer machine, you may receive an error message that says "no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1". This error occurs because your machine offers newer key exchange algorithms, but the server only supports older, less secure algorithms.
+## The Basics: Direct SSH Connection
 
-To resolve this issue, you can modify your SSH configuration file to specify the key exchange and host key algorithms that your machine should offer during the SSH handshake. You can do this by adding the following lines to your SSH configuration file (usually located at `~/.ssh/config`):
+The straightforward way to connect is with the standard SSH command:
 
 ```bash
-Host webhome.cc.iitk.ac.in
-  KexAlgorithms +diffie-hellman-group1-sha1
-  HostKeyAlgorithms +ssh-dss
+ssh username@webhome.iitk.ac.in
 ```
 
-In the above configuration, `KexAlgorithms` specifies the key exchange algorithms that your machine can use, and `HostKeyAlgorithms` specifies the host key algorithms that your machine can accept. By adding these lines to your SSH configuration file, you are telling your machine to offer only the specified algorithms when connecting to the IITK webhome server. This ensures that your SSH connection is established using the most secure algorithms available to both your machine and the server.
+Replace `username` with your IITK username, enter your password when prompted, and you're in! From here, you can navigate to your web home directory:
 
-In conclusion, keeping your SSH protocol and components up to date is crucial for maintaining secure communication between remote systems. If you encounter connection errors when trying to establish an SSH connection to an older server, such as the IITK webhome server, you can modify your SSH configuration file to specify the key exchange and host key algorithms that your machine should offer during the SSH handshake.
+```bash
+cd /webhome/username
+```
+
+## Creating a Smoother Connection with SSH Config
+
+Tired of typing that long command and your password every time? Here's my solution:
+
+1. Create an SSH config file if you don't already have one:
+
+```bash
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config  # Set proper permissions
+```
+
+2. Add your IITK webhome configuration:
+
+```
+# IITK webhome connection
+Host iitk-webhome
+    HostName webhome.iitk.ac.in
+    User your_username
+    IdentityFile ~/.ssh/id_rsa_iitk  # Optional if using key-based auth
+```
+
+3. Now you can simply type:
+
+```bash
+ssh iitk-webhome
+```
+
+## Setting Up Password-less Login (Optional)
+
+If you're like me and connect frequently, setting up key-based authentication can save you from typing your password every time:
+
+1. Generate an SSH key pair (if you don't already have one):
+
+```bash
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_iitk
+```
+
+2. Copy your public key to the webhome server:
+
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa_iitk.pub username@webhome.iitk.ac.in
+```
+
+Enter your password one last time, and future connections should be password-free!
+
+## Transferring Files to Your Web Home
+
+Need to upload files to your personal webpage? SCP makes it easy:
+
+```bash
+# Using the direct connection
+scp your_local_file.html username@webhome.iitk.ac.in:/webhome/username/
+
+# Or if you've set up the SSH config:
+scp your_local_file.html iitk-webhome:/webhome/your_username/
+```
+
+## Useful Commands Once Connected
+
+Once you're in, here are some handy commands for managing your web home:
+
+```bash
+# Check your storage quota
+quota -s
+
+# Set file permissions for a webpage (public readable)
+chmod 644 yourfile.html
+
+# Set directory permissions (navigable)
+chmod 755 yourdirectory
+```
+
+That's it! With this setup, managing your IITK web space becomes much more convenient. No more struggling with FTP clients or cumbersome web interfaces. Any questions about optimizing your SSH workflow? Feel free to reach out!

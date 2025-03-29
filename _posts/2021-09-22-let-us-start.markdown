@@ -3,44 +3,50 @@ title:  "How to scrape youtube playlist using python"
 layout: post
 permalink: youtube-scrapping-using-python
 date:   2021-09-22
-categories: ['scrapping']
+categories: ['web']
 tags: ['python']
 author: Sunil Dhaka
 ---
-In this post we are going to parse information on [some](https://www.youtube.com/playlist?list=PLRVhX1weTUd_hs_mcpfwcOq18tSdL0y60) youtube channel's content and store it into a csv file. Mainly information about video title, video discription, how many time it has been watched etc. I have tried my best to give a step by step procedure, with that you should be able to parse detail about YT videos on any playlist. Explanations are in `code` comments.
 
-1. IMport required module,
+Ever wanted to extract information from YouTube playlists? I recently needed to grab details like video titles and descriptions from a YouTube channel, and thought I'd share my approach. This simple tutorial will walk you through scraping a [YouTube playlist](https://www.youtube.com/playlist?list=PLRVhX1weTUd_hs_mcpfwcOq18tSdL0y60) using Python. Let's dive in!
+
+1. First, let's import the essential packages:
 ```python
 from bs4 import BeautifulSoup as bs
 import requests
 ```
-2. use `GET` requests,
+
+2. Next, we'll make a GET request to fetch the page content:
 ```python
-# particular link is used
+# Target the specific playlist URL
 link='https://www.youtube.com/playlist?list=PLRVhX1weTUd_hs_mcpfwcOq18tSdL0y60'
-# to tell website server processer to get us particular html page we use python library `requests`
-r=requests.get(link) # requests data form link
-page=r.text #convert into text
-soup=bs(page,'html.parser') #parse using BS
-#print(soup.prettify()) # if want to see the structure of parsed html page uncomment it.
+# Use requests to fetch the webpage content
+r=requests.get(link) 
+page=r.text # Convert to text
+soup=bs(page,'html.parser') # Parse with BeautifulSoup
+#print(soup.prettify()) # Uncomment to see the HTML structure
 ```
-3. to get titles of videos,
+
+3. To extract video titles:
 ```python
 title_soup=soup.find('meta',property='og:title')
 vid_title=title_soup['content'] if title_soup else 'not found'
 print(vid_title)
 ```
-4. to get discriptions of videos,
+
+4. For video descriptions:
 ```python
 disrip_soup=soup.find('meta',property='og:description')
 vid_discription=disrip_soup['content'] if disrip_soup else 'not found'
 print(vid_discription)
 ```
-5. to get upload date etc,
+
+5. Trying to get upload dates (which doesn't work for playlists):
 ```python
-date_soup=soup.find('meta',itemprop='uploadDate') # does not work with playlist
+date_soup=soup.find('meta',itemprop='uploadDate') # Doesn't work for playlists
 upload_date=date_soup['content'] if date_soup else 'not found'
 print(upload_date)
 #->not found
 ```
-Scrapping python is not that hard, it is a standard website and everything is nice and clean. To scrape other information you can use other property tags. I hope you found it intersting enough to get started on your own in python. Thank you.
+
+Web scraping doesn't have to be intimidating! YouTube's structured format makes it relatively straightforward to extract the information you need. You can expand on this foundation to extract other metadata using different property tags. Happy scraping!

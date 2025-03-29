@@ -2,12 +2,17 @@
 title: "Git learning"
 layout: post
 date: 2021-09-24
-categories: ['git']
+categories: ['dev']
 tags: ['git']
 author: Sunil Dhaka
 ---
 
-Remember these are according to my understanding and for my own reference, not official or anything. Now, basic thing is that you can work on a project locally without using `github`, but git provides many productive and useful tools for `free` and `easy`, and who won't want to save their time and be more productive on what really matters. I think that is one of the reason of `github` being so popular. [Github](https://github.com/) has all things stated nice on its website. To install git on your linux machine using terminal. Github has all nice documentations, try to use only these official sources. I have done this to get my git [CLI](https://github.com/cli/cli/blob/trunk/docs/install_linux.md),
+I've been diving into Git lately, and thought I'd share some notes to help myself (and maybe you!) remember the key concepts. While you can certainly work on projects locally without GitHub, the platform offers so many productivity tools for free—who wouldn't want to save time and focus on what truly matters?
+
+## Getting Started with Git CLI
+
+GitHub's documentation is excellent, but here's the quick version of how I installed the Git CLI on my Linux machine:
+
 ```bash
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
@@ -15,85 +20,95 @@ sudo apt update
 sudo apt install gh
 ```
 
-Other things like authentication and all can be followed [here](https://docs.github.com/en/get-started/quickstart/set-up-git). Don't forget to authorize your git CLI. I am going to do some basic git stuff for my site managment from terminal.
+For authentication and setup details, check out the [official guide](https://docs.github.com/en/get-started/quickstart/set-up-git). Don't forget to authorize your Git CLI!
 
-**`Clone and Commit:`**
+## Cloning and Committing
+
+Cloning a repository is straightforward:
+
 ```bash
 gh repo clone <https://rapo-lin>
 ```
-Change into repo cloned directory. Do anything with any file/folder like: `edit`, `remove`, `whatever`. Now to check repo status, commit with a message and push on remote git server(here it is out online git website). Remember when you clone a repo, it also gets attached into your git remote account, so when you want to commit some changes to remote repo, you just follow normal process of committing and pushing.
+
+After making changes to files, you'll want to commit them:
 
 ```bash
-git status
-git add <name-of-new-files-created>
-git commit -am "Your message about changes that you are going to push"
-git push # changes version of project goes online from local(offline) 
+git status                           # See what's changed
+git add <name-of-new-files-created>  # Stage new files
+git commit -am "Your message"        # Commit changes with a descriptive message
+git push                             # Push changes to the remote repository
 ```
 
-**`Make a git repo from CLI:`**
+When you clone a repo, it automatically connects to your remote account, making the push process seamless.
 
-Using command line interface is what I like when creating a new repo from scratch you just need to give one line and git automatically asks you some questions and creates your remote repo as well as clones it locally. We can also initiate a new repo from our exisiting project folder.
-````bash
+## Creating a New Repository from CLI
+
+Creating a new repo from scratch is as simple as:
+
+```bash
+gh repo create /name of repo/  # Follow the prompts to complete setup
 ```
-gh repo create /name of repo/ # creates a new repo and then follow the prompt #
-```
-cd ~/move to the project subdirectory
+
+You can also initialize Git in an existing project folder:
+
+```bash
+cd ~/project-directory
 git init
 ```
-````
-What git `init` does is it creates a hidden directory called `.git` and now we can start recording our revision of project. Even if you repeat git `init` on already git repo it won't over-ride previous init 👾. That is cool. To learn more about any command use `--help` manuals.
 
-**`Delete files and folders from CLI:`**
+This creates a hidden `.git` directory to track your revisions. Don't worry—running `git init` repeatedly won't override previous settings.
 
-To remove it is just same as bash commands. Without `--cached` rm removes file from local directory and then we have to commit and push to remote one. With `--cached` we can remove remote file from git repo and keep local file, to avoid checking that file in future git status runs, we can add that file's path into `.gitignore`. As always when using `rm` be extra careful.
+## Managing Files and Folders
+
+Removing files works similarly to bash commands:
+
 ```bash
-# go to the directory 
-git rm file-name
-git rm -r file or folder
-git rm --cached 
+git rm file-name               # Remove from both local directory and git tracking
+git rm -r file-or-folder       # Remove recursively
+git rm --cached                # Remove from git tracking but keep the local file
 ```
-When you have pushed a file that contains sensetive info like passwords etc, we might want to remove that file from entire git histoty. To remove a file from entire git history use below command. To learn specific operations meaning use `--help`. Official documents sort out things most of the times.
+
+Extra careful with `rm`—it's powerful! If you've accidentally committed sensitive information, you can remove it from the entire Git history:
+
 ```bash
 git filter-branch --force --index-filter --prune-empty "git rm --cached --ignore-unmatch <path_to_file>" HEAD
 ```
 
-**`Branch, checkout, and merge:`**
+## Working with Branches
 
-It is easy to create a branch. You can create it first locally and then set an upstream branch by,
+Creating a branch locally and pushing it to remote:
+
 ```bash
-git branch `name-of-branch`
-# created a local branch with some development that are not in main
-git push --set-upstream origin `name-of-branch`
-# up-streaming our locally created branch
-```
-Other way around, is not that simple: first create a new branch on github website repo and then make it local,
-```bash
-git branch --list # lists all branches
-# read third answer of "https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch", 
-# basically it first fetches what is new on origin and then checks it out
-git fetch origin
-git checkout
-```
-Now to switch a particular branch and develope there, and then commit to that branch you just do nomral process that you do when committing to main branch.
-```bash
-git checkout `branch-to-switch-to`
-# do your things on branch
-git status
-# check what new is created and modified
-git add `files created new`
-# add new files
-git commit -am "your-new-changes message"
-# here with `-a` we are committing all files you can commit only modified ones by specifing
-git push
-# all up-to-date on `this branch` not on main for that need to merge
+git branch name-of-branch                         # Create a local branch
+git push --set-upstream origin name-of-branch     # Set up tracking with remote
 ```
 
-Now to merge your branch with main -- the original one,
+To work with a branch created on GitHub:
+
 ```bash
-# go to the receiving branch
-git branch `receiving-branch-name=main`
-# to merge without conflict
-git merge `name-of-branch-to-be-merged`
+git branch --list              # List all branches
+git fetch origin               # Get updates from remote
+git checkout branch-name       # Switch to the branch
 ```
 
-Things get bit complicated when you have conflicting files in branches. Follow this guide and should be fine, it is really nice one. [Merge conflicting branches](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) ☿.
+When you're ready to commit changes to your branch:
+
+```bash
+git checkout branch-to-switch-to    # Switch to your branch
+# Make your changes
+git status                          # Check what's new
+git add new-files                   # Stage new files
+git commit -am "Your changes"       # Commit all changes
+git push                            # Push to your branch
+```
+
+## Merging Branches
+
+To merge your changes into the main branch:
+
+```bash
+git checkout main              # Switch to receiving branch
+git merge branch-to-merge      # Merge your changes
+```
+
+Things get more interesting when you have conflicting files between branches. When that happens, I've found the [Atlassian guide on merge conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) extremely helpful.

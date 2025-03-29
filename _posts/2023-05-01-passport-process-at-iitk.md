@@ -3,43 +3,59 @@ title: "Passport Process @IITK"
 layout: post
 permalink: passport-process-at-iitk
 date: 2023-05-01 
-categories: ['passport','iitk']
-tags: ['passport']
+categories: ['campus']
+tags: ['guide']
 author: Sunil Dhaka
 ---
 
-For students who wish to create a passport at IITK:
-- Create a bonafide certificate: This is a very important document for students. One can create a passport without it. However, with it, the process at PSK, Kanpur becomes much smoother. How to create one:
-   - Get a hall residence slip from the respective Hall office (it is the proof of residence)
-   - Fill [this](https://www.iitk.ac.in/dosa/Application-form-for-Bonafide-Certificate.pdf) form for passport purposes
-   - Attach the slip with the bonafide form and give it to your department's HOD office/office where the office helper works
-   - The department office forwards it to DOSA office, and the registrar creates your bonafide in 1-2 working days
-   - Go and get it from DOSA
+# Navigating the Passport Application Process at IITK
 
-- Online application and appointment schedule: It is a standard procedure that you should be able to handle
-   - Now apply for a passport online on this [website](https://passportindia.gov.in/)
-   - Pay the amount as per the type of passport normal, tatkal, or renew, etc.
-   - Schedule an appointment at [PSK, Kanpur](https://www.google.com/maps/place/Passport+Seva+Kendra,+Kanpur/@26.4744859,80.3092828,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd4c10e813c9f27:0xfe3168cc82aaaf62!8m2!3d26.4744811!4d80.3118577!16s%2Fg%2F124ygkv70)
-- Offline process at PSK: This is the most important step
-   - Go 10-15 minutes before your appointment. And remember, you are not the only one in your batch. Generally, they have 20-30 people in a single batch. 
-   - Now, once inside PSK, **don't waste your time on the inquiry window line, line up for the token window** (time-saving tip)
-   - Also, take one photocopy of all documents mentioned at the end (time and money-saving tip)
-   - Show photocopies of docs [sign them all] at the tatkal window and get a token number
-   - Go to the first floor after getting a token, and here begins the process of waiting (mostly) and getting shit done
-      * A. Processing Unit: Original docs get scanned, photo taken, fingerprints, sign. There are two screens, and they ask you to verify your details as they are filling it. On A window, all are private employees. 
-      * B. Verification Unit: Lots of waiting, and then you go before one government official who checks your docs and judges you :)
-      * C. Granting Unit: Lots of waiting, and then once more government official checks something and grants your application for police verification
-- Police verification: This whole process takes about 15-20 days. The police are slow
-   - After 2-3 days of getting passport grant (an email message), some police officer calls and asks you to submit copies of docs to IIT police chocki, type-A
-   - You can check your status on the passport website
-   - Kalyanpur thana checks documents and sends a report to SP office, Kanpur Nagar
-   - SP office gets back to PSK, and all done
-- Printing and speed post from Lucknow: 3-4 days to reach IIT sub-post office
+Getting your passport while studying at IIT Kanpur? I've been through it recently and thought I'd share my experience to make your journey smoother. Here's my step-by-step guide:
 
--------------
+## Step 1: Obtain a Bonafide Certificate
+This little document is pure gold for students. While technically you can apply without it, having a bonafide certificate makes the PSK Kanpur process significantly smoother. Here's how to get one:
 
-Docs needed:
-- Bonafide original
-- Aadhar/PAN/Voter: Aadhar preferred
-- 10th, 12th marksheets
+- Visit your Hall office and request a residence slip (this proves where you live)
+- Download and fill [this form](https://www.iitk.ac.in/dosa/Application-form-for-Bonafide-Certificate.pdf), specifying it's for passport purposes
+- Attach your residence slip to the bonafide form
+- Submit everything to your department's HOD office
+- The department will forward it to the DOSA office, and the registrar will create your bonafide in 1-2 working days
+- Finally, pick it up from the DOSA office
+
+## Step 2: Online Application and Appointment Booking
+This part follows the standard process for everyone in India:
+
+- Apply for your passport on the [official website](https://passportindia.gov.in/)
+- Pay the appropriate fee based on your application type (normal, tatkal, renewal, etc.)
+- Schedule an appointment at [PSK Kanpur](https://www.google.com/maps/place/Passport+Seva+Kendra,+Kanpur/@26.4744859,80.3092828,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd4c10e813c9f27:0xfe3168cc82aaaf62!8m2!3d26.4744811!4d80.3118577!16s%2Fg%2F124ygkv70)
+
+## Step 3: Visit the PSK Office
+This is where the real adventure begins:
+
+- Arrive 10-15 minutes before your appointment (remember, you'll be in a batch with 20-30 other applicants)
+- **Pro tip**: Skip the inquiry window and head straight to the token window line — huge time saver!
+- Bring one photocopy of all required documents (listed below) — saves both time and money
+- Sign all photocopies before showing them at the counter to get your token number
+- After receiving your token, proceed to the first floor where the main processing happens:
+  - **Station A** (Processing Unit): Your original documents get scanned, photo taken, fingerprints recorded, and signature captured. Staff will fill your details while you verify them on dual screens.
+  - **Station B** (Verification Unit): Prepare for some waiting, then meet a government official who'll scrutinize your documents and application.
+  - **Station C** (Granting Unit): More waiting, followed by a final check by another government official who approves your application for police verification.
+
+## Step 4: Police Verification
+This part requires patience:
+
+- Within 2-3 days of your PSK visit, a police officer will call asking you to submit document copies to IIT police chowki, Type-A
+- You can track your application status on the passport website
+- The Kalyanpur police station reviews your documents and forwards a report to the SP office, Kanpur Nagar
+- The SP office communicates back to PSK
+
+## Step 5: Final Delivery
+After successful verification, your passport gets printed in Lucknow and delivered by speed post to the IIT sub-post office within 3-4 days.
+
+## Essential Documents
+- Original bonafide certificate
+- Identification proof (Aadhar preferred, but PAN/Voter ID also works)
+- 10th and 12th marksheets
 - Institute ID card
+
+Hope this helps simplify your passport journey at IITK! Feel free to reach out if you have questions.

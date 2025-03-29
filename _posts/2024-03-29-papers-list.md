@@ -1,83 +1,89 @@
 ---
 layout: post
-title: papers list 
+title: Essential AI Papers & Resources - A Curated Collection
 date: 2024-03-29
-categories: [research]
-tags: [papers, research]
-description: Ultimate target is to make it as much as possible like a curated list, to start in some field, some essential papers to build on top of
+categories: ['research']
+tags: ['ai']
+description: A handpicked list of foundational and cutting-edge AI papers to build your knowledge
 author: Sunil Dhaka 
 ---
 
-# some papers
-	| Paper Title                               | arXiv Link                                                                                    |
-	|-------------------------------------------|-----------------------------------------------------------------------------------------------|
-	| RAG/LoRA etc                              | -                                                                                             |
-	| Demucs                                    | -                                                                                             |
-	| ML from scratch series:                   | [Transformers](https://scholar.harvard.edu/binxuw/classes/machine-learning-scratch/materials/transformers) |
-	|                                           | [Diffusion](https://jalammar.github.io/illustrated-stable-diffusion/)                          |
-	|                                           | [Resources rich website](https://github.com/DrugowitschLab/ML-from-scratch-seminar)           |
-	| Diffusion Models                          | [See resource section at the end](https://jalammar.github.io/illustrated-stable-diffusion/)   |
-	|                                           | [Unet Paper: Biomedical segmentation](https://learn.deeplearning.ai/diffusion-models)         |
-	|                                           | [minDiffusion git repo](https://github.com/lllyasviel/ControlNet/)                             |
-	|                                           | [Score sde paper](https://mlberkeley.substack.com/p/vq-vae)                                     |
-	|                                           | [Unified perspective on DMs tutorial paper](https://amaarora.github.io/posts/2020-06-29-FocalLoss.html) |
-	| GAN Tutorial                              | [Lilian Gan Blog](https://mlberkeley.substack.com/p/vq-vae)                                     |
-	|                                           | [GAN specialization from deeplearning.ai](https://mlberkeley.substack.com/p/dalle2?utm_source=substack&utm_campaign=post_embed&utm_medium=web) |
-	| ControlNets                               | [Paper](https://arxiv.org/abs/2302.05543)                                                     |
-	|                                           | [Code](https://github.com/lllyasviel/ControlNet/)                                              |
-	| RL tutorial                               | -                                                                                             |
-	| Adam original paper                       | -                                                                                             |
-	| Flash attention paper                     | [Memory-Efficient Attention: xformers from meta github](https://www.tensorflow.org/text/tutorials/transformer) |
-	| Focal Vs Cross Entropy                    | [Article](https://amaarora.github.io/posts/2020-06-29-FocalLoss.html)                          |
-	| Mamba                                     | -                                                                                             |
-	| CLIP                                      | -                                                                                             |
-	| Wavenet                                   | -                                                                                             |
-	| A Neural Probabilistic Language Model    | -                                                                                             |
-	| Byte pair encoding paper                  | -                                                                                             |
-	| BERT                                      | -                                                                                             |
-	| Bahdanau et al., 2014and Luong et al., 2015 | -                                                                                           |
-	| VQ-VAE                                    | [Why are we doing the discretisation, what goal it achieves?](https://mlberkeley.substack.com/p/vq-vae) |
-	| Soundstream                               | [Learn SFT and CNN visual from 3brown1blue channel](https://mlberkeley.substack.com/p/vq-vae) |
-	|                                           | [Cover CNN basics again with Image and audio and see transformer, audiogen, musicgen, encoded paper as reference](https://mlberkeley.substack.com/p/vq-vae) |
-	| ML Crash Course                           | [Part 1](https://mlberkeley.substack.com/p/part-1) / [Part 2](https://mlberkeley.substack.com/p/part-2) / [Part 3](https://mlberkeley.substack.com/p/part-3) / [Part 4](https://mlberkeley.substack.com/p/part-4) / [Part 5](https://mlberkeley.substack.com/p/part-5) |
-	|                                           | [Karpathy makemore series : code part 1,2,3,4,5](https://mlberkeley.substack.com/p/part-1)      |
-	| Dall-e                                    | [Original paper](https://mlberkeley.substack.com/p/vq-vae)                                      |
-	|                                           | [Additional Info](https://mlberkeley.substack.com/p/dalle2?utm_source=substack&utm_campaign=post_embed&utm_medium=web) |
-	| Information theory                       | [Visual Information](https://colah.github.io/posts/2015-09-Visual-Information/)                |
-	|                                           | [Kullback-Leibler Divergence](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) |
-	| VAE tutorial paper                        | [What is Variational Autoencoder (VAE) Tutorial](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/) |
-	|                                           | [Autoencoder](https://www.compthree.com/blog/autoencoder/)                                      |
-	|                                           | [Revision Material](https://www.compthree.com/blog/autoencoder/)                                |
-	| Layer Normalization: the main thing      | [Batch Layer Normalization](https://www.pinecone.io/learn/batch-layer-normalization/)           |
-	| Audiogen                                  | -                                                                                             |
-	| Attention is all you need                 | [Transformer Tutorial](https://www.tensorflow.org/text/tutorials/transformer)                   |
-	|                                           | [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)                   |
-	| Residual connection original paper        | [Residual Blocks](https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec) |
-	| RNN original paper                        |
+# Navigating the AI Paper Landscape
 
+The field of AI moves at a dizzying pace, with dozens of new papers published daily. But which ones are truly worth your time? I've compiled this collection of papers that have shaped my understanding of AI and machine learning—from foundational concepts to cutting-edge innovations. Whether you're looking to enter the field or deepen your expertise, these resources should help guide your journey.
 
-# some blogs
-	Lil'log
-	Jay Alammar
-	Andrej Karpathy
-	Colah's Blog
-	ML@Berkely
-	AI Summer
-	Blog pages of Deepmind, OpenAI labs
+## Essential Papers to Know
 
-# websites to hunt papers
-	openreview.net
-	arxiv.org
-	google-scholar
+| Paper Title | Resources & Notes |
+|-------------|-------------------|
+| RAG/LoRA Techniques | Building blocks for efficient fine-tuning and retrieval |
+| Demucs | Audio source separation breakthrough |
+| ML from Scratch Series | [Transformers](https://scholar.harvard.edu/binxuw/classes/machine-learning-scratch/materials/transformers) |
+| | [Diffusion Models](https://jalammar.github.io/illustrated-stable-diffusion/) |
+| | [Comprehensive Resources](https://github.com/DrugowitschLab/ML-from-scratch-seminar) |
+| Diffusion Models | [Illustrated Guide](https://jalammar.github.io/illustrated-stable-diffusion/) |
+| | [U-Net Paper: Biomedical Segmentation](https://learn.deeplearning.ai/diffusion-models) |
+| | [minDiffusion Implementation](https://github.com/lllyasviel/ControlNet/) |
+| | [Score SDE Paper](https://mlberkeley.substack.com/p/vq-vae) |
+| | [Unified Perspective Tutorial](https://amaarora.github.io/posts/2020-06-29-FocalLoss.html) |
+| GAN Tutorial | [Lilian's Blog](https://mlberkeley.substack.com/p/vq-vae) |
+| | [DeepLearning.AI Specialization](https://mlberkeley.substack.com/p/dalle2?utm_source=substack&utm_campaign=post_embed&utm_medium=web) |
+| ControlNet | [Paper](https://arxiv.org/abs/2302.05543) |
+| | [Code Implementation](https://github.com/lllyasviel/ControlNet/) |
+| Adam Optimizer | The paper that changed how we train deep networks |
+| Flash Attention | [Memory-Efficient Attention](https://www.tensorflow.org/text/tutorials/transformer) |
+| Focal vs Cross Entropy Loss | [Detailed Analysis](https://amaarora.github.io/posts/2020-06-29-FocalLoss.html) |
+| Mamba | State space models as alternative to transformers |
+| CLIP | Connecting vision and language |
+| Wavenet | Pioneering audio generation |
+| Neural Probabilistic Language Model | Foundations of modern NLP |
+| Byte Pair Encoding | Essential for tokenization |
+| BERT | The paper that revolutionized NLP |
+| Attention Mechanisms | Bahdanau (2014) and Luong (2015) papers |
+| VQ-VAE | [Understanding Discretization Benefits](https://mlberkeley.substack.com/p/vq-vae) |
+| Soundstream | [CNN Visualizations from 3Blue1Brown](https://mlberkeley.substack.com/p/vq-vae) |
+| | [CNN Basics with Image/Audio](https://mlberkeley.substack.com/p/vq-vae) |
+| ML Crash Course | [Part 1](https://mlberkeley.substack.com/p/part-1) / [Part 2](https://mlberkeley.substack.com/p/part-2) / [Part 3](https://mlberkeley.substack.com/p/part-3) / [Part 4](https://mlberkeley.substack.com/p/part-4) / [Part 5](https://mlberkeley.substack.com/p/part-5) |
+| | [Karpathy's makemore series](https://mlberkeley.substack.com/p/part-1) |
+| Layer Normalization | [Batch vs Layer Norm Explained](https://www.pinecone.io/learn/batch-layer-normalization/) |
+| Audiogen | Audio generation breakthroughs |
+| Attention is All You Need | [Transformer Tutorial](https://www.tensorflow.org/text/tutorials/transformer) |
+| | [Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) |
+| Residual Connections | [Building Blocks of ResNet](https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec) |
 
-# some researchers to follow
-	Jurgen Schmidhuber
-	Andrej Karpathy
-	Ilya Sutskever
-	Ian Goodfellow
-	Yann Lecun
-	Yoshua Bengio
-	Geoffrey Hinton
-	Alexi Efros
-	Andrew Ng
-	Sharon Zhou
+## Must-Read Blogs
+
+The best papers are often complemented by clear explanations from talented writers:
+
+- Lil'log
+- Jay Alammar
+- Andrej Karpathy
+- Colah's Blog
+- ML@Berkeley
+- AI Summer
+- Blog pages from DeepMind and OpenAI
+
+## Where to Find Papers
+
+To stay current with emerging research:
+
+- [OpenReview.net](https://openreview.net)
+- [ArXiv.org](https://arxiv.org)
+- Google Scholar
+
+## Researchers Worth Following
+
+These voices consistently contribute groundbreaking work:
+
+- Jürgen Schmidhuber
+- Andrej Karpathy
+- Ilya Sutskever
+- Ian Goodfellow
+- Yann LeCun
+- Yoshua Bengio
+- Geoffrey Hinton
+- Alexei Efros
+- Andrew Ng
+- Sharon Zhou
+
+What papers or resources have you found most valuable in your AI journey? I'd love to expand this list with your recommendations!
