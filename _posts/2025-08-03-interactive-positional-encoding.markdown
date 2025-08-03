@@ -120,7 +120,7 @@ author: Sunil Dhaka
             <!-- Wave Plots Container -->
             <div class="bg-white rounded-xl shadow-sm p-6 ring-1 ring-gray-200">
                 <h2 class="text-xl font-semibold text-gray-800 mb-1">Underlying Sine & Cosine Waves</h2>
-                <p class="text-gray-600 mb-4">Each pair of dimensions in the vector comes from a sine/cosine wave pair. The vertical line shows the current position.</p>
+                <p class="text-gray-600 mb-4">Each pair of dimensions comes from a sine/cosine wave pair, and their wavelengths are mentioned below. The vertical line shows the current position.</p>
                 <p class="text-xs text-amber-600 bg-amber-50 p-2 rounded-md mb-4">Note: Rendering may be slow with high dimension values.</p>
                 <div id="wave-plots" class="space-y-4 max-h-[600px] overflow-y-auto pr-2">
                     <!-- Wave plots will be generated here -->
@@ -133,16 +133,13 @@ author: Sunil Dhaka
             <h2 class="text-xl font-semibold text-gray-800 mb-1">Full Positional Encoding Matrix</h2>
             <p class="text-gray-600 mb-4">This heatmap shows the entire PE matrix. The highlighted row corresponds to the selected position.</p>
             <div class="flex items-center">
-                <!-- Y-axis Label -->
                 <div class="flex justify-center items-center" style="writing-mode: vertical-rl; transform: rotate(180deg);">
                     <p class="text-sm text-gray-600 font-medium p-2 whitespace-nowrap">Position (<span class="latex">pos</span>)</p>
                 </div>
-                <!-- Heatmap and X-axis Label -->
                 <div class="flex-grow flex flex-col items-center">
                     <div id="heatmap-wrapper" class="w-full" style="height: 400px;">
                         <canvas id="heatmap-canvas" class="w-full h-full"></canvas>
                     </div>
-                    <!-- X-axis Label -->
                     <div class="mt-2">
                          <p class="text-sm text-gray-600 font-medium">Dimension Index (<span class="latex">d</span>)</p>
                     </div>
@@ -150,6 +147,74 @@ author: Sunil Dhaka
             </div>
         </div>
 
+        <!-- Distance Analysis Container -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mt-8 ring-1 ring-gray-200">
+            <h2 class="text-xl font-semibold text-gray-800 mb-1">How do these encodings help differentiate positions?</h2>
+            <div class="mt-4 space-y-4 text-gray-700">
+                <p><strong>Absolute Position:</strong> The unique mix of frequencies ensures that every position in the sequence is assigned a distinct vector, as seen in the comparison charts below.</p>
+                <p><strong>Relative Position:</strong> The encoding for <span class="latex">pos+k</span> is a linear transformation (a rotation) of the encoding for <span class="latex">pos</span>. This means the relationship between positions is consistent. Notice how the Cosine Similarity for any two positions with the same offset (e.g., 7 to 8 vs. 22 to 23) is identical.</p>
+                <p><strong>Note:</strong> The sine and cosine functions have values in [-1, 1], which keeps the values of the positional encoding matrix in a normalized range.</p>
+                <div class="text-sm bg-gray-50 p-3 rounded-lg border">
+                    <p class="font-semibold">You can prove this yourself!</p>
+                    <p>The fact that <span class="latex">PE<sub>(pos+k)</sub></span> is a linear transformation of <span class="latex">PE<sub>(pos)</sub></span> comes from the angle addition formulas and can be expressed as a rotation matrix where <span class="latex">T<sub>i</sub> = 10000<sup>2i/d</sup></span>:</p>
+                    <div class="flex justify-center items-center space-x-2 mt-2 text-sm md:text-base">
+                        <span class="latex">[ p<sub>2i, pos+k</sub>, p<sub>2i+1, pos+k</sub> ] = [ p<sub>2i, pos</sub>, p<sub>2i+1, pos</sub> ]</span>
+                        <span class="text-2xl font-light">&middot;</span>
+                        <div class="flex items-center">
+                            <span class="text-4xl font-light">[</span>
+                            <div class="grid grid-cols-2 gap-x-2 text-center latex">
+                                <span>cos(k/T<sub>i</sub>)</span><span>-sin(k/T<sub>i</sub>)</span>
+                                <span>sin(k/T<sub>i</sub>)</span><span>cos(k/T<sub>i</sub>)</span>
+                            </div>
+                            <span class="text-4xl font-light">]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-6">
+                <div>
+                    <label for="pos1-input" class="block text-sm font-medium text-gray-700">Position 1</label>
+                    <input id="pos1-input" type="number" value="7" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="pos2-input" class="block text-sm font-medium text-gray-700">Position 2</label>
+                    <input id="pos2-input" type="number" value="8" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-center">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Cosine Similarity</p>
+                    <p id="cosine-similarity-value" class="text-2xl font-bold text-indigo-600">0.000</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Euclidean Distance</p>
+                    <p id="euclidean-distance-value" class="text-2xl font-bold text-indigo-600">0.000</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-medium text-center mb-2">Vector for Position <span id="pos1-label">7</span></h3>
+                    <div id="comparison-chart-1" class="w-full h-64 border rounded-lg"></div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium text-center mb-2">Vector for Position <span id="pos2-label">8</span></h3>
+                    <div id="comparison-chart-2" class="w-full h-64 border rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frequency Analysis Container -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mt-8 ring-1 ring-gray-200">
+            <h2 class="text-xl font-semibold text-gray-800 mb-1">Frequency & Wavelength Analysis</h2>
+            <p class="text-gray-600 mt-4">The core of this encoding lies in using waves of different frequencies. The term <span class="latex">1 / 10000<sup>2i/d</sup></span> controls the frequency. As the dimension index <span class="latex">i</span> increases, the frequency decreases, and the wavelength (<span class="latex">&lambda;</span>) increases according to the formula: <span class="latex">&lambda;<sub>i</sub> = 2&pi; &middot; 10000<sup>2i/d</sup></span>.</p>
+            <p class="text-gray-600 mt-2">Select dimension indices (<span class="latex">i</span>) below to plot their corresponding sine waves.</p>
+            
+            <div id="frequency-controls" class="my-4 flex flex-wrap gap-x-4 gap-y-2"></div>
+            <div id="frequency-chart" class="w-full h-96"></div>
+        </div>
     </div>
 
     <script>
@@ -162,12 +227,16 @@ author: Sunil Dhaka
         const getPEValue = (pos, dim, d_model) => {
             const i = Math.floor(dim / 2);
             const angle = pos / Math.pow(10000, (2 * i) / d_model);
-            if (dim % 2 === 0) {
-                return Math.sin(angle);
-            } else {
-                return Math.cos(angle);
-            }
+            return (dim % 2 === 0) ? Math.sin(angle) : Math.cos(angle);
         };
+
+        const getPEVector = (pos, d_model) => {
+            const vector = [];
+            for (let dim = 0; dim < d_model; dim++) {
+                vector.push(getPEValue(pos, dim, d_model));
+            }
+            return vector;
+        }
 
         // --- DOM ELEMENTS ---
         const posSlider = document.getElementById('pos-slider');
@@ -180,19 +249,34 @@ author: Sunil Dhaka
         const wavePlotsContainer = document.getElementById('wave-plots');
         const heatmapCanvas = document.getElementById('heatmap-canvas');
         const heatmapCtx = heatmapCanvas.getContext('2d');
+        const pos1Input = document.getElementById('pos1-input');
+        const pos2Input = document.getElementById('pos2-input');
+        const pos1Label = document.getElementById('pos1-label');
+        const pos2Label = document.getElementById('pos2-label');
+        const cosineSimilarityValue = document.getElementById('cosine-similarity-value');
+        const euclideanDistanceValue = document.getElementById('euclidean-distance-value');
+        const comparisonChart1Container = document.getElementById('comparison-chart-1');
+        const comparisonChart2Container = document.getElementById('comparison-chart-2');
+        const freqControlsContainer = document.getElementById('frequency-controls');
+        const freqChartContainer = document.getElementById('frequency-chart');
 
         // --- STATE ---
         let state = {
             pos: 0,
             d_model: 32,
-            max_pos: 1023
+            max_pos: 1023,
+            pos1: 7,
+            pos2: 8,
+            freq_indices: [0, 1, 2, 8]
         };
 
         // --- D3 AND VISUALIZATION SETUP ---
         const margin = { top: 20, right: 20, bottom: 40, left: 40 };
+        const freqMargin = { top: 20, right: 80, bottom: 40, left: 40 };
         let mainChartWidth, mainChartHeight;
         let mainSvg, mainX, mainY, mainXAxis, mainYAxis;
         const colorScale = d3.scaleSequential(d3.interpolateViridis).domain([-1, 1]);
+        const freqColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
         function setupMainChart() {
             peVectorContainer.innerHTML = '';
@@ -243,7 +327,8 @@ author: Sunil Dhaka
                 const wrapper = document.createElement('div');
                 const title = document.createElement('p');
                 title.className = "text-xs text-gray-500 mb-1";
-                title.innerHTML = `Dimensions <span class="font-semibold text-blue-600">${2*i} (sin)</span> & <span class="font-semibold text-red-600">${2*i+1} (cos)</span>`;
+                const wavelength = 2 * Math.PI * Math.pow(10000, (2 * i) / d_model);
+                title.innerHTML = `Dims <span class="font-semibold" style="color: #3b82f6;">${2*i}</span>, <span class="font-semibold" style="color: #ef4444;">${2*i+1}</span> | <span class="latex">&lambda; &approx; ${wavelength.toFixed(1)}</span>`;
                 const waveDiv = document.createElement('div');
                 waveDiv.id = `wave-plot-${i}`;
                 waveDiv.className = 'w-full h-24';
@@ -301,18 +386,14 @@ author: Sunil Dhaka
 
         function drawHeatmap() {
             const { d_model, max_pos } = state;
-            
             const canvasWidth = heatmapCanvas.clientWidth;
             const canvasHeight = heatmapCanvas.clientHeight;
             if (canvasWidth === 0 || canvasHeight === 0) return;
             heatmapCanvas.width = canvasWidth;
             heatmapCanvas.height = canvasHeight;
-
             const cellWidth = canvasWidth / d_model;
             const cellHeight = canvasHeight / (max_pos + 1);
-
             heatmapCtx.clearRect(0, 0, canvasWidth, canvasHeight);
-
             for (let p = 0; p < heatmapData.length; p++) {
                 for (let d = 0; d < heatmapData[p].length; d++) {
                     const value = heatmapData[p][d];
@@ -327,12 +408,9 @@ author: Sunil Dhaka
             const canvasWidth = heatmapCanvas.width;
             const canvasHeight = heatmapCanvas.height;
             if (canvasWidth === 0 || canvasHeight === 0) return;
-
             drawHeatmap();
-
             const cellHeight = canvasHeight / (max_pos + 1);
             const y = pos * cellHeight;
-
             heatmapCtx.fillStyle = 'rgba(255, 255, 255, 0.5)';
             heatmapCtx.fillRect(0, y, canvasWidth, cellHeight);
             heatmapCtx.strokeStyle = '#000';
@@ -340,14 +418,175 @@ author: Sunil Dhaka
             heatmapCtx.strokeRect(0, y, canvasWidth, cellHeight);
         }
 
+        // --- DISTANCE ANALYSIS FUNCTIONS ---
+        function cosineSimilarity(vecA, vecB) {
+            let dotProduct = 0, normA = 0, normB = 0;
+            for (let i = 0; i < vecA.length; i++) {
+                dotProduct += vecA[i] * vecB[i];
+                normA += vecA[i] * vecA[i];
+                normB += vecB[i] * vecB[i];
+            }
+            return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+        }
+
+        function euclideanDistance(vecA, vecB) {
+            let sum = 0;
+            for (let i = 0; i < vecA.length; i++) {
+                sum += Math.pow(vecA[i] - vecB[i], 2);
+            }
+            return Math.sqrt(sum);
+        }
+
+        function setupComparisonChart(container) {
+            container.innerHTML = '';
+            const width = container.clientWidth - margin.left - margin.right;
+            const height = container.clientHeight - margin.top - margin.bottom;
+            const svg = d3.select(container).append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+            svg.append("g").attr("class", "x-axis").attr("transform", `translate(0,${height})`);
+            svg.append("g").attr("class", "y-axis");
+            svg.append("line").attr("class", "zero-line").attr("x1", 0).attr("x2", width).attr("stroke", "#9ca3af").attr("stroke-width", 1);
+            return svg;
+        }
+
+        function updateComparisonChart(svg, vectorData) {
+            const { d_model } = state;
+            const container = svg.node().parentNode.parentNode;
+            const width = container.clientWidth - margin.left - margin.right;
+            const height = container.clientHeight - margin.top - margin.bottom;
+            const x = d3.scaleBand().range([0, width]).padding(0.1).domain(d3.range(d_model));
+            const y = d3.scaleLinear().range([height, 0]).domain([-1, 1]);
+            svg.select(".x-axis").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).tickValues([]));
+            svg.select(".y-axis").call(d3.axisLeft(y).ticks(5));
+            svg.select(".zero-line").attr("y1", y(0)).attr("y2", y(0));
+            const data = vectorData.map((value, i) => ({dim: i, value, type: i % 2 === 0 ? 'sin' : 'cos'}));
+            const bars = svg.selectAll("rect").data(data, d => d.dim);
+            bars.enter().append("rect").attr("fill", d => d.type === 'sin' ? '#3b82f6' : '#ef4444')
+                .merge(bars).transition().duration(100)
+                .attr("x", d => x(d.dim)).attr("width", x.bandwidth())
+                .attr("y", d => d.value > 0 ? y(d.value) : y(0))
+                .attr("height", d => Math.abs(y(d.value) - y(0)));
+            bars.exit().remove();
+        }
+
+        function updateDistanceAnalysis() {
+            const { d_model, pos1, pos2 } = state;
+            pos1Label.textContent = pos1;
+            pos2Label.textContent = pos2;
+            const vec1 = getPEVector(pos1, d_model);
+            const vec2 = getPEVector(pos2, d_model);
+            cosineSimilarityValue.textContent = cosineSimilarity(vec1, vec2).toFixed(4);
+            euclideanDistanceValue.textContent = euclideanDistance(vec1, vec2).toFixed(4);
+            updateComparisonChart(d3.select("#comparison-chart-1 svg g"), vec1);
+            updateComparisonChart(d3.select("#comparison-chart-2 svg g"), vec2);
+        }
+
+        // --- FREQUENCY ANALYSIS FUNCTIONS ---
+        function setupFrequencyControls() {
+            freqControlsContainer.innerHTML = '';
+            const max_i = state.d_model / 2;
+            const indicesToShow = [0, 1, 2, 3, 4, 8, 16, 32, 64].filter(i => i < max_i);
+            
+            indicesToShow.forEach(i => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center';
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `freq-check-${i}`;
+                checkbox.value = i;
+                checkbox.checked = state.freq_indices.includes(i);
+                checkbox.className = 'h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500';
+                checkbox.onchange = handleFrequencySelection;
+                
+                const label = document.createElement('label');
+                label.htmlFor = `freq-check-${i}`;
+                label.className = 'ml-2 block text-sm text-gray-900';
+                label.innerHTML = `i = ${i}`;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                freqControlsContainer.appendChild(div);
+            });
+        }
+
+        function handleFrequencySelection() {
+            state.freq_indices = Array.from(freqControlsContainer.querySelectorAll('input:checked')).map(cb => +cb.value);
+            updateFrequencyChart();
+        }
+
+        function setupFrequencyChart() {
+            freqChartContainer.innerHTML = '';
+            const width = freqChartContainer.clientWidth - freqMargin.left - freqMargin.right;
+            const height = freqChartContainer.clientHeight - freqMargin.top - freqMargin.bottom;
+            const svg = d3.select("#frequency-chart").append("svg")
+                .attr("width", width + freqMargin.left + freqMargin.right)
+                .attr("height", height + freqMargin.top + freqMargin.bottom)
+                .append("g")
+                .attr("transform", `translate(${freqMargin.left},${freqMargin.top})`);
+            
+            svg.append("g").attr("class", "x-axis").attr("transform", `translate(0,${height})`);
+            svg.append("g").attr("class", "y-axis");
+            svg.append("text").attr("text-anchor", "middle").attr("x", width/2).attr("y", height + freqMargin.bottom - 5).text("Position (pos)");
+            svg.append("text").attr("text-anchor", "middle").attr("transform", "rotate(-90)").attr("y", -freqMargin.left + 10).attr("x", -height/2).text("Value");
+            svg.append("g").attr("class", "legend").attr("transform", `translate(${width + 10}, 0)`);
+        }
+
+        function updateFrequencyChart() {
+            const { d_model, max_pos, freq_indices } = state;
+            const svg = d3.select("#frequency-chart svg g");
+            if (svg.empty()) return;
+
+            const width = freqChartContainer.clientWidth - freqMargin.left - freqMargin.right;
+            const height = freqChartContainer.clientHeight - freqMargin.top - freqMargin.bottom;
+
+            const x = d3.scaleLinear().domain([0, max_pos]).range([0, width]);
+            const y = d3.scaleLinear().domain([-1.1, 1.1]).range([height, 0]);
+
+            svg.select(".x-axis").call(d3.axisBottom(x));
+            svg.select(".y-axis").call(d3.axisLeft(y));
+
+            svg.selectAll(".line").remove();
+            
+            freq_indices.forEach(i => {
+                const lineData = d3.range(0, max_pos + 1).map(p => ({
+                    pos: p,
+                    value: getPEValue(p, 2 * i, d_model)
+                }));
+                const line = d3.line().x(d => x(d.pos)).y(d => y(d.value));
+                svg.append("path")
+                    .datum(lineData)
+                    .attr("class", "line")
+                    .attr("fill", "none")
+                    .attr("stroke", freqColorScale(i))
+                    .attr("stroke-width", 2)
+                    .attr("d", line);
+            });
+
+            // Update legend
+            const legend = svg.select(".legend");
+            legend.selectAll("*").remove();
+            freq_indices.forEach((i, idx) => {
+                const legendItem = legend.append("g").attr("transform", `translate(0, ${idx * 20})`);
+                legendItem.append("rect").attr("width", 15).attr("height", 15).attr("fill", freqColorScale(i));
+                legendItem.append("text").attr("x", 20).attr("y", 12).text(`i = ${i}`).attr("font-size", "12px");
+            });
+        }
+
         // --- UPDATE & EVENT HANDLERS ---
         function fullReset() {
             setupMainChart();
             setupWavePlots();
             prepareHeatmapData();
+            setupFrequencyControls();
+            setupFrequencyChart();
             updateMainChart();
             updateWavePlots();
             highlightHeatmapRow();
+            updateDistanceAnalysis();
+            updateFrequencyChart();
         }
         
         posSlider.addEventListener('input', (e) => {
@@ -372,8 +611,10 @@ author: Sunil Dhaka
             if (state.pos > newMax) {
                 state.pos = newMax;
                 posSlider.value = newMax;
-                posValueeLabel.textContent = newMax;
+                posValueLabel.textContent = newMax;
             }
+            pos1Input.max = newMax;
+            pos2Input.max = newMax;
             fullReset();
         });
 
@@ -391,18 +632,36 @@ author: Sunil Dhaka
             }
             fullReset();
         });
+
+        pos1Input.addEventListener('change', (e) => {
+            state.pos1 = parseInt(e.target.value);
+            updateDistanceAnalysis();
+        });
+
+        pos2Input.addEventListener('change', (e) => {
+            state.pos2 = parseInt(e.target.value);
+            updateDistanceAnalysis();
+        });
         
         window.addEventListener('resize', fullReset);
 
         function initializeVisuals() {
             posSlider.max = maxPosInput.value;
             dSlider.max = maxDimInput.value;
+            pos1Input.max = maxPosInput.value;
+            pos2Input.max = maxPosInput.value;
             
-            posValueLabel.textContent = posSlider.value;
-            dValueLabel.textContent = dSlider.value;
             state.pos = +posSlider.value;
             state.d_model = +dSlider.value;
             state.max_pos = +posSlider.max;
+            state.pos1 = +pos1Input.value;
+            state.pos2 = +pos2Input.value;
+
+            posValueLabel.textContent = state.pos;
+            dValueLabel.textContent = state.d_model;
+
+            setupComparisonChart(comparisonChart1Container);
+            setupComparisonChart(comparisonChart2Container);
 
             fullReset();
         }
@@ -412,3 +671,4 @@ author: Sunil Dhaka
     </script>
 </body>
 </html>
+
