@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: full-width
 title: "Interactive Positional Encoding"
 date: 2025-08-03
 categories: ['machine-learning']
@@ -8,7 +8,6 @@ description: "An interactive visualization of positional encoding in Transformer
 author: Sunil Dhaka
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
