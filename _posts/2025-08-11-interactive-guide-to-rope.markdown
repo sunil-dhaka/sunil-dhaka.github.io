@@ -21,18 +21,14 @@ author: Sunil Dhaka
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- KaTeX for Math Rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous">
-    </script>
+    <!-- Math will be rendered by layout's MathJax -->
 
     <style>
       body { 
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         background-color: #f8fafc;
       }
-      .katex { font-size: 1.1em; }
+
       .bg-grid {
         background-image:
           linear-gradient(to right, #e5e7eb 1px, transparent 1px),
@@ -286,11 +282,7 @@ author: Sunil Dhaka
         elements.tabContents.forEach(content => {
           content.classList.toggle('hidden', content.id !== `tab-${tabKey}`);
         });
-        // Re-render KaTeX when switching tabs, as hidden elements might not render correctly initially
-        // This call ensures math is rendered after the tab content becomes visible.
-        if (window.renderMathInElement) {
-          renderMathInElement(document.body, { delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}] });
-        }
+        // Math will be rendered by layout's MathJax
       }
 
       // --- Math Helpers ---
@@ -478,16 +470,7 @@ author: Sunil Dhaka
           lucide.createIcons();
         }
         
-        // Manually render KaTeX after the DOM is fully loaded and elements exist.
-        // This replaces the onload attribute on the script tag.
-        if (window.renderMathInElement) {
-          renderMathInElement(document.body, { 
-            delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false}
-            ]
-          });
-        }
+        // Math will be rendered by layout's MathJax
 
         // Populate dimension selects (even numbers from 2 to 16)
         for (let d = 2; d <= 16; d += 2) {
