@@ -20,19 +20,17 @@ author: Sunil Dhaka
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- KaTeX for Math Rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous">
-    </script>
 
     <style>
       body { 
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         background-color: #f8fafc;
       }
-      .katex { font-size: 1.1em; }
+      .latex { 
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 1.05em;
+      }
       .bg-grid {
         background-image:
           linear-gradient(to right, #e5e7eb 1px, transparent 1px),
@@ -83,42 +81,48 @@ author: Sunil Dhaka
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
               <h3 class="text-xl font-semibold mb-4 text-blue-700">1. The 2D Case: Rotation as Complex Multiplication</h3>
               <p class="mb-4">
-                For a 2D vector $x_m$ (representing an input token's embedding at position $m$), RoPE applies a linear transformation $W_q$ (e.g., to create a query vector) and then rotates it based on its position $m$. This elegant rotation can be represented using complex numbers. If $W_q x_m$ is viewed as a complex number, its rotation by an angle $m\theta$ is simply:
+                For a 2D vector <span class="latex">x<sub>m</sub></span> (representing an input token’s embedding at position <span class="latex">m</span>), RoPE applies a linear transformation <span class="latex">W<sub>q</sub></span> (e.g., to create a query vector) and then rotates it based on its position <span class="latex">m</span>. This elegant rotation can be represented using complex numbers. If <span class="latex">W<sub>q</sub> x<sub>m</sub></span> is viewed as a complex number, its rotation by an angle <span class="latex">mθ</span> is simply:
               </p>
               <div class="bg-gray-50 p-4 rounded-lg text-center overflow-x-auto">
-                $ f_q(x_m, m) = (W_q x_m) \cdot e^{im\theta} $
+                <span class="latex">f<sub>q</sub>(x<sub>m</sub>, m) = (W<sub>q</sub> x<sub>m</sub>) · e<sup>i m θ</sup></span>
               </div>
               <p class="mt-4">
-                Here, $e^{im\theta} = \cos(m\theta) + i\sin(m\theta)$ is Euler's formula. When expanded, this complex multiplication is equivalent to a standard 2D rotation matrix applied to the vector $(W_q x_m)$: 
+                Here, <span class="latex">e<sup>i m θ</sup> = cos(mθ) + i · sin(mθ)</span> is Euler’s formula. When expanded, this complex multiplication is equivalent to a standard 2D rotation matrix applied to the vector <span class="latex">(W<sub>q</sub> x<sub>m</sub>)</span>:
               </p>
               <div class="bg-gray-50 p-4 mt-2 rounded-lg text-center overflow-x-auto">
-                $ 
-                  f_q(x_m, m) = 
-                  \begin{pmatrix} \cos(m\theta) & - \sin(m\theta) \\ \sin(m\theta) & \cos(m\theta) 
-                  \end{pmatrix}
-                  (W_q x_m)
-                $ 
+                <div class="flex items-center justify-center gap-2">
+                  <span class="latex">f<sub>q</sub>(x<sub>m</sub>, m) =</span>
+                  <div class="flex items-center">
+                    <span class="text-3xl font-light">[</span>
+                    <div class="grid grid-cols-2 gap-x-4 text-center latex">
+                      <span>cos(mθ)</span><span>-sin(mθ)</span>
+                      <span>sin(mθ)</span><span>cos(mθ)</span>
+                    </div>
+                    <span class="text-3xl font-light">]</span>
+                  </div>
+                  <span class="latex">(W<sub>q</sub> x<sub>m</sub>)</span>
+                </div>
               </div>
               <p class="mt-4 text-gray-700">
-                This means each 2D vector is rotated by an angle directly proportional to its position $m$, scaled by a base frequency $\theta$.
+                This means each 2D vector is rotated by an angle directly proportional to its position <span class="latex">m</span>, scaled by a base frequency <span class="latex">θ</span>.
               </p>
             </div>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
               <h3 class="text-xl font-semibold mb-4 text-blue-700">2. The General d-Dimensional Form: Block-Diagonal Rotations</h3>
               <p class="mb-4">
-                RoPE extends this concept to a $d$-dimensional vector by pairing up features. For example, dimensions $(0, 1)$ form the first pair, $(2, 3)$ the second, and so on, up to $(d-2, d-1)$. Each of these $\frac{d}{2}$ pairs is rotated independently. Crucially, each pair uses a different rotation frequency, $\theta_i$, forming a block-diagonal rotation matrix $R^d_{\Theta,m}$:
+                RoPE extends this concept to a d-dimensional vector by pairing up features. For example, dimensions (0, 1) form the first pair, (2, 3) the second, and so on, up to (d−2, d−1). Each of these <span class="latex">d/2</span> pairs is rotated independently. Crucially, each pair uses a different rotation frequency, <span class="latex">θ<sub>i</sub></span>, forming a block-diagonal rotation matrix <span class="latex">R<sup>d</sup><sub>Θ,m</sub></span>:
               </p>
               <div class="bg-gray-50 p-4 rounded-lg text-center overflow-x-auto">
-                $ f_q(x_m, m) = R^d_{\Theta,m} W_q x_m $
+                <span class="latex">f<sub>q</sub>(x<sub>m</sub>, m) = R<sup>d</sup><sub>Θ,m</sub> · W<sub>q</sub> · x<sub>m</sub></span>
               </div>
               <p class="mt-4">
-                The rotation frequencies $\theta_i$ for each pair $i \in [0, \frac{d}{2}-1]$ are defined as:
+                The rotation frequencies <span class="latex">θ<sub>i</sub></span> for each pair <span class="latex">i ∈ [0, d/2 − 1]</span> are defined as:
               </p>
               <div class="bg-gray-50 p-4 mt-2 rounded-lg text-center overflow-x-auto">
-                $ \theta_i = \text{base}^{-2i/d} $
+                <span class="latex">θ<sub>i</sub> = base<sup>−2i/d</sup></span>
               </div>
               <p class="mt-4 text-gray-700">
-                Here, `base` is a hyperparameter (commonly $10000$). This formula ensures a spectrum of frequencies: pairs with smaller $i$ (earlier dimensions) have higher frequencies (rotate faster), while pairs with larger $i$ (later dimensions) have lower frequencies (rotate slower). This allows the model to capture both fine-grained and coarse-grained positional information.
+                Here, `base` is a hyperparameter (commonly 10000). This formula ensures a spectrum of frequencies: pairs with smaller <span class="latex">i</span> (earlier dimensions) have higher frequencies (rotate faster), while pairs with larger <span class="latex">i</span> (later dimensions) have lower frequencies (rotate slower). This allows the model to capture both fine-grained and coarse-grained positional information.
               </p>
             </div>
           </div>
@@ -127,20 +131,18 @@ author: Sunil Dhaka
           <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
             <h3 class="text-xl font-semibold mb-4 text-blue-700">3. Application to Self-Attention: Relative Position Encoding</h3>
             <p class="mb-4">
-              The true power of RoPE shines in the self-attention mechanism. The attention score between a query vector $q_m$ (derived from $x_m$ at position $m$) and a key vector $k_n$ (derived from $x_n$ at position $n$) is their dot product. RoPE's design ensures that this dot product naturally incorporates relative positional information.
+              The true power of RoPE shines in the self-attention mechanism. The attention score between a query vector <span class="latex">q<sub>m</sub></span> (derived from <span class="latex">x<sub>m</sub></span> at position <span class="latex">m</span>) and a key vector <span class="latex">k<sub>n</sub></span> (derived from <span class="latex">x<sub>n</sub></span> at position <span class="latex">n</span>) is their dot product. RoPE’s design ensures that this dot product naturally incorporates relative positional information.
             </p>
             <div class="bg-gray-50 p-4 rounded-lg text-center overflow-x-auto">
-              $ 
-              \begin{aligned}
-              q_m^T k_n &= (R^d_{\Theta,m} W_q x_m)^T (R^d_{\Theta,n} W_k x_n) \\
-              &= (W_q x_m)^T (R^d_{\Theta,m})^T R^d_{\Theta,n} (W_k x_n) \\
-              &= (W_q x_m)^T R^d_{\Theta, n-m} (W_k x_n)
-              \end{aligned}
-              $ 
+              <div class="latex text-left inline-block">
+                q<sub>m</sub><sup>T</sup> k<sub>n</sub> = (R<sup>d</sup><sub>Θ,m</sub> · W<sub>q</sub> · x<sub>m</sub>)<sup>T</sup> (R<sup>d</sup><sub>Θ,n</sub> · W<sub>k</sub> · x<sub>n</sub>)<br/>
+                = (W<sub>q</sub> · x<sub>m</sub>)<sup>T</sup> (R<sup>d</sup><sub>Θ,m</sub>)<sup>T</sup> R<sup>d</sup><sub>Θ,n</sub> (W<sub>k</sub> · x<sub>n</sub>)<br/>
+                = (W<sub>q</sub> · x<sub>m</sub>)<sup>T</sup> R<sup>d</sup><sub>Θ,n−m</sub> (W<sub>k</sub> · x<sub>n</sub>)
+              </div>
             </div>
             <p class="mt-4 text-gray-700">
-              The key step is $(R^d_{\Theta,m})^T R^d_{\Theta,n} = R^d_{\Theta, n-m}$. This identity, which holds for rotation matrices, means that the combined effect of rotating $q_m$ by $m$ and $k_n$ by $n$ is equivalent to rotating $k_n$ by the relative position $(n-m)$ with respect to $q_m$.
-              This final equation shows that the attention score is no longer a function of the absolute positions $m$ and $n$, but rather a function of the input vectors $x_m, x_n$ and their **relative displacement**, $n-m$. This is how RoPE elegantly injects relative position information directly into the self-attention calculation, which is critical for sequence understanding in models like LLMs.
+              The key step is <span class="latex">(R<sup>d</sup><sub>Θ,m</sub>)<sup>T</sup> R<sup>d</sup><sub>Θ,n</sub> = R<sup>d</sup><sub>Θ,n−m</sub></span>. This identity, which holds for rotation matrices, means that the combined effect of rotating <span class="latex">q<sub>m</sub></span> by <span class="latex">m</span> and <span class="latex">k<sub>n</sub></span> by <span class="latex">n</span> is equivalent to rotating <span class="latex">k<sub>n</sub></span> by the relative position <span class="latex">(n−m)</span> with respect to <span class="latex">q<sub>m</sub></span>.
+              This final equation shows that the attention score is no longer a function of the absolute positions <span class="latex">m</span> and <span class="latex">n</span>, but rather a function of the input vectors <span class="latex">x<sub>m</sub></span>, <span class="latex">x<sub>n</sub></span> and their relative displacement <span class="latex">n−m</span>. This is how RoPE elegantly injects relative position information directly into the self-attention calculation.
             </p>
           </div>
         </div>
@@ -173,14 +175,14 @@ author: Sunil Dhaka
               <h4 class="font-semibold mb-2 text-center text-blue-700">2D Rotation Visualization: How Rotations Happen</h4>
               <canvas id="rotationCanvas" width="500" height="400" class="w-full h-auto border rounded-md bg-grid"></canvas>
               <p class="text-xs text-gray-500 mt-2 text-center">
-                Each colored vector represents a 2D pair within the larger embedding. Its angle is dynamically determined by its position $m$ and its unique frequency $\theta_i$. Observe how each pair rotates proportionally to the current position.
+                Each colored vector represents a 2D pair within the larger embedding. Its angle is determined by its position <span class="latex">m</span> and its unique frequency <span class="latex">θ<sub>i</sub></span>. Observe how each pair rotates proportionally to the current position.
               </p>
             </div>
             <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
               <h4 class="font-semibold mb-2 text-center text-blue-700">Frequency Analysis: Positional Encodings for a Given Position</h4>
               <canvas id="frequencyCanvas" width="500" height="400" class="w-full h-auto border rounded-md bg-grid"></canvas>
               <p class="text-xs text-gray-500 mt-2 text-center">
-                This plot shows the sine wave associated with each pair's rotation frequency. The horizontal axis represents different positions, and the vertical axis shows the sine component of the rotation angle $m\theta_i$. The **red vertical line** marks the current position $m$, illustrating how the angular value for *all* dimensions (grouped into pairs) changes at that specific position. This reveals how positional encodings affect the entire embedding.
+                This plot shows the sine wave associated with each pair's rotation frequency. The horizontal axis represents different positions, and the vertical axis shows the sine component of the rotation angle <span class="latex">m · θ<sub>i</sub></span>. The red vertical line marks the current position <span class="latex">m</span>, illustrating how the angular value for all dimensions (grouped into pairs) changes at that specific position.
               </p>
             </div>
           </div>
@@ -210,8 +212,8 @@ author: Sunil Dhaka
               </label>
             </div>
             <p class="text-sm text-gray-600 mt-4">
-              This view demonstrates the core property of RoPE: the dot product between two vectors, $q_m$ and $k_n$, depends only on their **relative distance** ($m-n$). 
-              Each panel below shows a single 2D pair. The **blue vector** represents the rotation for position $m$, and the **red vector** for position $n$. Observe how the angle between them, $\Delta\theta = (m-n)\theta_i$, is the critical factor. This relative angle is precisely what the attention mechanism "sees," highlighting RoPE's effectiveness in capturing positional relationships.
+              This view demonstrates the core property of RoPE: the dot product between two vectors, <span class="latex">q<sub>m</sub></span> and <span class="latex">k<sub>n</sub></span>, depends only on their relative distance <span class="latex">(m−n)</span>.
+              Each panel below shows a single 2D pair. The blue vector represents the rotation for position <span class="latex">m</span>, and the red vector for position <span class="latex">n</span>. Observe how the angle between them, <span class="latex">Δθ = (m−n) · θ<sub>i</sub></span>, is the critical factor.
             </p>
           </div>
           <div id="pairGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
@@ -286,11 +288,6 @@ author: Sunil Dhaka
         elements.tabContents.forEach(content => {
           content.classList.toggle('hidden', content.id !== `tab-${tabKey}`);
         });
-        // Re-render KaTeX when switching tabs, as hidden elements might not render correctly initially
-        // This call ensures math is rendered after the tab content becomes visible.
-        if (window.renderMathInElement) {
-          renderMathInElement(document.body, { delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}] });
-        }
       }
 
       // --- Math Helpers ---
@@ -478,16 +475,7 @@ author: Sunil Dhaka
           lucide.createIcons();
         }
         
-        // Manually render KaTeX after the DOM is fully loaded and elements exist.
-        // This replaces the onload attribute on the script tag.
-        if (window.renderMathInElement) {
-          renderMathInElement(document.body, { 
-            delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false}
-            ]
-          });
-        }
+        // Math is rendered inline using simple HTML (<sub>, <sup>, etc.). No external renderer needed.
 
         // Populate dimension selects (even numbers from 2 to 16)
         for (let d = 2; d <= 16; d += 2) {
