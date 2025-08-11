@@ -75,7 +75,7 @@ author: Sunil Dhaka
       </div>
 
       <!-- Tab Content -->
-      <main>
+      <div>
         <!-- Tab 1: The Math -->
         <div id="tab-math" class="space-y-8">
           <!-- Top Section: 2D and General Form -->
@@ -240,7 +240,7 @@ author: Sunil Dhaka
             </ul>
           </div>
         </div>
-      </main>
+      </div>
     </div>
 
     <script>
