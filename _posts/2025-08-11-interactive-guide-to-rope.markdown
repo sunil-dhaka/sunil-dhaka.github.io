@@ -2,7 +2,7 @@
 layout: full-width
 title: "Rotary Position Embedding – An Interactive Guide"
 date: 2025-08-11
-categories: ['llms', 'ai']
+categories: ['ai']
 tags: ['rope', 'positional-encoding', 'transformers', 'interactive-visualization']
 description: "An interactive guide to the math and intuition behind RoPE."
 author: Sunil Dhaka
