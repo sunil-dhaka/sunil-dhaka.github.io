@@ -256,11 +256,11 @@ author: Sunil Dhaka
 
       // --- DOM Elements ---
       const $ = (selector) => document.querySelector(selector);
-      const $$ = (selector) => document.querySelectorAll(selector);
+      const queryAll = (selector) => document.querySelectorAll(selector);
       
       const elements = {
-        tabs: $$('#tabs button'),
-        tabContents: $$('main > div'),
+        tabs: queryAll('#tabs button'),
+        tabContents: queryAll('main > div'),
         dimSelect: $('#dimSelect'),
         dimSelect2: $('#dimSelect2'),
         posSlider: $('#posSlider'),
