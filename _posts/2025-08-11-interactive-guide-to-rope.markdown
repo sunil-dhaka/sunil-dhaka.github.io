@@ -260,7 +260,7 @@ author: Sunil Dhaka
       
       const elements = {
         tabs: queryAll('#tabs button'),
-        tabContents: queryAll('main > div'),
+        tabContents: queryAll('[id^="tab-"]'),
         dimSelect: $('#dimSelect'),
         dimSelect2: $('#dimSelect2'),
         posSlider: $('#posSlider'),
