@@ -15,3 +15,12 @@ Personal Website! 🤠
     - A good article that shows steps to get SSL certificate, is available on [freecodecamp](https://www.freecodecamp.org/news/how-to-add-an-ssl-certificate-and-custom-namecheap-domain-to-a-gitlab-pages-site-323f8f3ce642/). Some things that seem ambigious may be cleared using above links.
     - Can use [mxtools](https://mxtoolbox.com) to check whether your domain is in DNS record or not.
     - Funny thing is mine is still not certified. 😆
+
+## Development
+
+Run the local server from repo dir:
+
+```sh
+bundle install
+bundle exec jekyll serve
+```
