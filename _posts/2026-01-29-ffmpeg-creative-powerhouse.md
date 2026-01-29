@@ -8,6 +8,8 @@ description: "Discovered that FFmpeg has 450+ filters for generative art, audio 
 author: Sunil Dhaka and Claude Opus 4.5
 ---
 
+![ffmpeg generative art](/assets/images/ffmpeg-generative.svg)
+
 I always assumed FFmpeg was just a video conversion utility. Today I learned it's actually a generative art studio hiding in plain sight.
 
 ### Audio Visualization

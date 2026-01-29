@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
+  <defs>
+    <linearGradient id="terminalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d2d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="#0f0f0f" rx="12"/>
+
+  <!-- Terminal Window -->
+  <rect x="40" y="40" width="720" height="240" fill="url(#terminalGrad)" rx="8"/>
+  <circle cx="65" cy="60" r="6" fill="#ff5f56"/>
+  <circle cx="85" cy="60" r="6" fill="#ffbd2e"/>
+  <circle cx="105" cy="60" r="6" fill="#27ca40"/>
+
+  <!-- Terminal Content -->
+  <text x="60" y="105" font-family="monospace" font-size="14" fill="#6b7280">$</text>
+  <text x="80" y="105" font-family="monospace" font-size="14" fill="#22d3ee">try</text>
+
+  <!-- Search Box -->
+  <rect x="60" y="125" width="680" height="36" fill="#262626" rx="4" stroke="#404040" stroke-width="1"/>
+  <text x="75" y="148" font-family="monospace" font-size="13" fill="#9ca3af">Search:</text>
+  <text x="145" y="148" font-family="monospace" font-size="13" fill="#f9fafb">redis</text>
+  <rect x="178" y="135" width="2" height="16" fill="#6366f1">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Results List -->
+  <rect x="60" y="170" width="680" height="28" fill="url(#accentGrad)" rx="3"/>
+  <text x="75" y="189" font-family="monospace" font-size="12" fill="#ffffff">2025-08-17-redis-experiment</text>
+  <text x="640" y="189" font-family="monospace" font-size="11" fill="#c7d2fe">~/src/tries</text>
+
+  <rect x="60" y="202" width="680" height="28" fill="transparent" rx="3"/>
+  <text x="75" y="221" font-family="monospace" font-size="12" fill="#9ca3af">2024-12-03-redis-streams-test</text>
+
+  <rect x="60" y="234" width="680" height="28" fill="transparent" rx="3"/>
+  <text x="75" y="253" font-family="monospace" font-size="12" fill="#9ca3af">2024-06-11-redis-cache-layer</text>
+
+  <!-- Hint -->
+  <text x="400" y="300" font-family="system-ui, sans-serif" font-size="11" fill="#525252" text-anchor="middle">Fuzzy search through all your experiments</text>
+</svg>

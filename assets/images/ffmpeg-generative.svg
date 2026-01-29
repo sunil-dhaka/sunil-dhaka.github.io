@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#18181b"/>
+      <stop offset="100%" style="stop-color:#09090b"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <linearGradient id="accent4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="280" fill="url(#cardBg)" rx="16"/>
+
+  <!-- Command prompt -->
+  <text x="40" y="45" font-family="ui-monospace, monospace" font-size="13" fill="#71717a">$</text>
+  <text x="55" y="45" font-family="ui-monospace, monospace" font-size="13" fill="#a1a1aa">ffmpeg -f lavfi -i</text>
+  <text x="210" y="45" font-family="ui-monospace, monospace" font-size="13" fill="#fbbf24">"filter"</text>
+  <text x="275" y="45" font-family="ui-monospace, monospace" font-size="13" fill="#71717a">out.mp4</text>
+
+  <!-- Divider line -->
+  <line x1="40" y1="65" x2="760" y2="65" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Four cards -->
+  <!-- Mandelbrot -->
+  <rect x="40" y="85" width="165" height="140" fill="#27272a" rx="12"/>
+  <circle cx="122" cy="145" r="35" fill="url(#accent1)" opacity="0.9"/>
+  <circle cx="130" cy="140" r="18" fill="#18181b"/>
+  <circle cx="134" cy="138" r="6" fill="#27272a"/>
+  <text x="122" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">mandelbrot</text>
+
+  <!-- Spectrogram -->
+  <rect x="225" y="85" width="165" height="140" fill="#27272a" rx="12"/>
+  <g transform="translate(255, 105)">
+    <rect x="0" y="20" width="10" height="60" fill="url(#accent2)" rx="2" opacity="0.9"/>
+    <rect x="16" y="30" width="10" height="50" fill="url(#accent2)" rx="2" opacity="0.7"/>
+    <rect x="32" y="10" width="10" height="70" fill="url(#accent2)" rx="2" opacity="0.85"/>
+    <rect x="48" y="35" width="10" height="45" fill="url(#accent2)" rx="2" opacity="0.6"/>
+    <rect x="64" y="15" width="10" height="65" fill="url(#accent2)" rx="2" opacity="0.8"/>
+    <rect x="80" y="25" width="10" height="55" fill="url(#accent2)" rx="2" opacity="0.75"/>
+  </g>
+  <text x="307" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">showspectrum</text>
+
+  <!-- Cellular -->
+  <rect x="410" y="85" width="165" height="140" fill="#27272a" rx="12"/>
+  <g transform="translate(445, 115)">
+    <rect x="0" y="0" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+    <rect x="12" y="0" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.5"/>
+    <rect x="36" y="0" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.8"/>
+    <rect x="60" y="0" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.6"/>
+    <rect x="84" y="0" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+
+    <rect x="12" y="12" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.7"/>
+    <rect x="24" y="12" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+    <rect x="48" y="12" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.6"/>
+    <rect x="72" y="12" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.8"/>
+
+    <rect x="0" y="24" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.6"/>
+    <rect x="24" y="24" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.8"/>
+    <rect x="36" y="24" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+    <rect x="60" y="24" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.5"/>
+    <rect x="84" y="24" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.7"/>
+
+    <rect x="12" y="36" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+    <rect x="48" y="36" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.7"/>
+    <rect x="72" y="36" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+
+    <rect x="0" y="48" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.8"/>
+    <rect x="24" y="48" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.6"/>
+    <rect x="36" y="48" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.9"/>
+    <rect x="60" y="48" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.7"/>
+    <rect x="84" y="48" width="8" height="8" fill="url(#accent3)" rx="1" opacity="0.5"/>
+  </g>
+  <text x="492" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">life</text>
+
+  <!-- Perlin -->
+  <rect x="595" y="85" width="165" height="140" fill="#27272a" rx="12"/>
+  <g transform="translate(620, 115)" opacity="0.85">
+    <ellipse cx="30" cy="30" rx="28" ry="20" fill="url(#accent4)" opacity="0.6"/>
+    <ellipse cx="70" cy="40" rx="35" ry="22" fill="url(#accent4)" opacity="0.5"/>
+    <ellipse cx="110" cy="25" rx="25" ry="18" fill="url(#accent4)" opacity="0.7"/>
+    <ellipse cx="50" cy="50" rx="30" ry="18" fill="url(#accent4)" opacity="0.4"/>
+    <ellipse cx="90" cy="55" rx="28" ry="16" fill="url(#accent4)" opacity="0.55"/>
+  </g>
+  <text x="677" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">perlin</text>
+
+  <!-- Footer -->
+  <text x="400" y="258" font-family="system-ui, sans-serif" font-size="11" fill="#52525b" text-anchor="middle">450+ filters for generative art</text>
+</svg>
