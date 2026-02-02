@@ -2,7 +2,7 @@
 layout: post
 title: Essential AI Papers & Resources - A Curated Collection
 date: 2024-03-29
-categories: ['research']
+categories: ['ai']
 tags: ['ai']
 description: A handpicked list of foundational and cutting-edge AI papers to build your knowledge
 author: Sunil Dhaka 

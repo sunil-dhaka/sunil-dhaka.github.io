@@ -3,7 +3,7 @@ title: "DSA questions"
 layout: post
 permalink: dsa-ques 
 date: 2023-05-11
-categories: ['dsa']
+categories: ['dev']
 tags: ['dsa']
 author: Sunil Dhaka
 ---

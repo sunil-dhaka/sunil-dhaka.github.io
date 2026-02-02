@@ -2,7 +2,7 @@
 layout: post
 title: "Creating Your Own Music Library: Spotify to MP3 Guide"
 date: 2023-12-09
-categories: ['music']
+categories: ['dev']
 tags: ['spotify']
 description: How to build a personal music library from your Spotify playlists
 author: Sunil Dhaka

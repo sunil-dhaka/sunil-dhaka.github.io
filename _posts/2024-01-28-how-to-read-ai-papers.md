@@ -2,7 +2,7 @@
 layout: post
 title: Mastering AI Research Papers - A Practical Guide
 date: 2024-01-28
-categories: ['research']
+categories: ['ai']
 tags: ['ai']
 description: How to approach and understand complex AI research papers
 author: Sunil Dhaka

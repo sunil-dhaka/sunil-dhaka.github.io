@@ -2,7 +2,7 @@
 layout: post
 title: "MySQL: From Installation to First Query"
 date: 2023-08-15
-categories: ['database']
+categories: ['dev']
 tags: ['mysql']
 description: Essential steps for getting started with MySQL
 author: Sunil Dhaka

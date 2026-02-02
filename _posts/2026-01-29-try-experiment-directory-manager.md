@@ -2,7 +2,7 @@
 layout: post
 title: "try: A Simple Way to Manage Experiment Directories"
 date: 2026-01-29
-categories: ['productivity']
+categories: ['til']
 tags: ['cli', 'productivity', 'terminal']
 description: "How I use try to quickly navigate experiments and clone repos for exploration."
 author: Sunil Dhaka and Claude Opus 4.5

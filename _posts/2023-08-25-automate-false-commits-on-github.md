@@ -2,7 +2,7 @@
 layout: post
 title: "Keep Your GitHub Garden Green: Automating Contributions"
 date: 2023-08-25
-categories: ['automation']
+categories: ['dev']
 tags: ['git']
 description: How to automate GitHub contributions to maintain your streak
 author: Sunil Dhaka

@@ -2,7 +2,7 @@
 layout: post
 title: Automating YouTube Uploads - Work Smarter, Not Harder
 date: 2023-05-23
-categories: ['automation']
+categories: ['dev']
 tags: ['youtube']
 description: How to automate video uploads to YouTube
 author: Sunil Dhaka

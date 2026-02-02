@@ -3,7 +3,7 @@ title: "Connecting to IITK Webhome via SSH"
 layout: post
 permalink: ssh-iitk-webhome
 date: 2023-05-15
-categories: ['campus']
+categories: ['life']
 tags: ['tech']
 author: Sunil Dhaka
 ---

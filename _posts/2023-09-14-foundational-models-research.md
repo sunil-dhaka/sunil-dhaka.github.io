@@ -2,7 +2,7 @@
 layout: post
 title: "Diving Into Foundational Models: A Research Guide"
 date: 2023-09-14
-categories: ['research']
+categories: ['ai']
 tags: ['ai']
 description: Exploring the landscape of foundation models in AI research
 author: Sunil Dhaka

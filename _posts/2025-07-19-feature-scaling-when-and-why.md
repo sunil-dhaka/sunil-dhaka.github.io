@@ -2,7 +2,7 @@
 layout: post
 title: "Feature Scaling: A Comprehensive Guide"
 date: 2025-07-19
-categories: ['machine-learning']
+categories: ['ai']
 tags: ['feature-engineering', 'data-preprocessing', 'best-practices']
 description: "An in-depth look at why, when, and how to apply feature scaling for various machine learning algorithms, from distance-based models to tree ensembles."
 author: Sunil Dhaka

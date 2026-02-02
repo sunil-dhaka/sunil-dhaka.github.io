@@ -2,7 +2,7 @@
 layout: post
 title: Setting Up MySQL on macOS - A Beginner's Guide
 date: 2022-05-09
-categories: ['database']
+categories: ['dev']
 tags: ['mysql']
 description: A step-by-step guide to installing and configuring MySQL on macOS
 author: Sunil Dhaka

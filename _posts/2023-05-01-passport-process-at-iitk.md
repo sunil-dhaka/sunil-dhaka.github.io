@@ -3,7 +3,7 @@ title: "Passport Process @IITK"
 layout: post
 permalink: passport-process-at-iitk
 date: 2023-05-01 
-categories: ['campus']
+categories: ['life']
 tags: ['guide']
 author: Sunil Dhaka
 ---
