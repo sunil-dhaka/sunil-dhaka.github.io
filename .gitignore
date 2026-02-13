@@ -4,3 +4,6 @@ Gemfile.lock
 _drafts/
 .ipynb_checkpoints/
 _config.yml.save
+.DS_Store
+.bundle/
+vendor/

@@ -21,3 +21,46 @@ p {
 h1, h2, h3, h4, h5, h6 {
   text-shadow: none;
 }
+
+.post-comments {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  background: #fafafa;
+}
+
+.post-comments__title {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.post-comments__description {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.giscus-thread {
+  position: relative;
+  min-height: 6rem;
+}
+
+.comments-fallback {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.comments-fallback a {
+  font-weight: 600;
+}
+
+.comments-warning {
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
