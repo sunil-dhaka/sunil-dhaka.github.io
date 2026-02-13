@@ -44,7 +44,7 @@ We've been using this at work for evaluating agent-built skills against business
 
 ## Non-interactive mode for automation
 
-Both Claude Code (`claude -p`) and Codex CLI (`codex --quiet`) offer non-interactive modes that make this practical to automate.
+Both Claude Code (`claude -p`) and Codex CLI (`codex exec`) offer non-interactive modes that make this practical to automate.
 
 ```bash
 echo "Your eval prompt" | claude -p \
