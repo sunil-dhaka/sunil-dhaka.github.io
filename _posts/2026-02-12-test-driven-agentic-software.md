@@ -5,7 +5,7 @@ date: 2026-02-12
 categories: ['ai']
 tags: ['llm', 'ai', 'eval', 'testing']
 description: "Agents can build complex software now. The bottleneck is proving it works. Tests written before the code -- classical and LLM-judged -- close that gap."
-author: Sunil Dhaka
+author: Sunil Dhaka and Claude Opus 4.6
 ---
 
 ![Diagram showing the LLM-judged eval pipeline: Test Suite defines YAML cases and criteria, Agent runs via claude -p subprocess with skills and MCP tools, LLM Judge scores output against a multi-dimension rubric, and Results produce pass/fail scores with markdown reports. A server-side Runner orchestrates the flow and recomputes scores to prevent self-inflation.](/assets/images/llm-judged-evals.svg)
