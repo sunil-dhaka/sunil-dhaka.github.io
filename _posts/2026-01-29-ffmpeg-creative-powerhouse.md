@@ -5,7 +5,7 @@ date: 2026-01-29
 categories: ['til']
 tags: ['ffmpeg', 'creative-coding', 'youtube']
 description: "Discovered that FFmpeg has 450+ filters for generative art, audio visualization, and mathematical rendering."
-author: Sunil Dhaka and Claude Opus 4.5
+author: Sunil Dhaka
 ---
 
 ![FFmpeg creative capabilities: four panels showing generative art with mandelbrot fractals, audio waveform visualization, mathematical function rendering, and color gradient generation -- all from ffmpeg filter commands](/assets/images/ffmpeg-generative.svg)

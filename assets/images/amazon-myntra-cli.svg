@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
+  <defs>
+    <linearGradient id="terminalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d2d2d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="#0f0f0f" rx="12"/>
+
+  <!-- Terminal Window -->
+  <rect x="40" y="30" width="720" height="260" fill="url(#terminalGrad)" rx="8"/>
+  <circle cx="65" cy="50" r="6" fill="#ff5f56"/>
+  <circle cx="85" cy="50" r="6" fill="#ffbd2e"/>
+  <circle cx="105" cy="50" r="6" fill="#27ca40"/>
+
+  <!-- Amazon search -->
+  <text x="60" y="90" font-family="monospace" font-size="13" fill="#6b7280">$</text>
+  <text x="78" y="90" font-family="monospace" font-size="13" fill="#ff9900">amz</text>
+  <text x="110" y="90" font-family="monospace" font-size="13" fill="#e5e7eb">search "pull up bar" --sort reviews</text>
+
+  <!-- Amazon result row -->
+  <text x="60" y="115" font-family="monospace" font-size="11" fill="#9ca3af">B09JC86WNK</text>
+  <text x="190" y="115" font-family="monospace" font-size="11" fill="#f9fafb">Sportneer Pull Up Bar</text>
+  <text x="480" y="115" font-family="monospace" font-size="11" fill="#22c55e">Rs.1,896</text>
+  <text x="580" y="115" font-family="monospace" font-size="11" fill="#facc15">4.4 [****.]</text>
+  <text x="700" y="115" font-family="monospace" font-size="11" fill="#9ca3af">6,157</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="135" x2="740" y2="135" stroke="#333" stroke-width="1"/>
+
+  <!-- Myntra search -->
+  <text x="60" y="165" font-family="monospace" font-size="13" fill="#6b7280">$</text>
+  <text x="78" y="165" font-family="monospace" font-size="13" fill="#ff3f6c">myn</text>
+  <text x="110" y="165" font-family="monospace" font-size="13" fill="#e5e7eb">product 13327736</text>
+
+  <!-- Myntra product detail -->
+  <text x="60" y="190" font-family="monospace" font-size="11" fill="#22d3ee">Nike</text>
+  <text x="100" y="190" font-family="monospace" font-size="11" fill="#f9fafb">Air Force 1 '07 Sneakers</text>
+  <text x="60" y="210" font-family="monospace" font-size="11" fill="#22c55e">Rs.7,495</text>
+  <text x="150" y="210" font-family="monospace" font-size="11" fill="#6b7280" text-decoration="line-through">Rs.8,695</text>
+  <text x="250" y="210" font-family="monospace" font-size="11" fill="#ef4444">(14% off)</text>
+  <text x="60" y="230" font-family="monospace" font-size="11" fill="#9ca3af">Sizes: 6 7 8 9 10 11 12</text>
+
+  <!-- Myntra size chart hint -->
+  <text x="60" y="255" font-family="monospace" font-size="11" fill="#facc15">4.5</text>
+  <text x="85" y="255" font-family="monospace" font-size="11" fill="#9ca3af">(3,228 ratings)</text>
+  <text x="240" y="255" font-family="monospace" font-size="11" fill="#6b7280">Foot Length: 26.0cm (Size 7)</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#525252" text-anchor="middle">Product research from the terminal -- no browser, no login</text>
+</svg>

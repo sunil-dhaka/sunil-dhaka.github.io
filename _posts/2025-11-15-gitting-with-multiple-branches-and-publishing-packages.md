@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gitting with Multiple Branches and Publishing Packages"
+title: "Git Branches, Releases, and Publishing Packages"
 date: 2025-11-15
 categories: ['dev']
 tags: ['git', 'python', 'release-management']

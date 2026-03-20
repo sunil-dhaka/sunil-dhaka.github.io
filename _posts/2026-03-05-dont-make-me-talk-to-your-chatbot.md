@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don't Make Me Talk to Your Chatbot"
+title: "Quoting Ray Myers"
 date: 2026-03-05
 categories: ['quotations']
 tags: ['ai', 'philosophy']
@@ -8,7 +8,7 @@ description: "Ray Myers on the etiquette of sharing AI output in human interacti
 author: Sunil Dhaka
 ---
 
-[Ray Myers](https://raymyers.org/post/dont-make-me-talk-to-your-chatbot/):
+In [Don't Make Me Talk to Your Chatbot](https://raymyers.org/post/dont-make-me-talk-to-your-chatbot/) Ray Myers talks about communication in the chatbot age. Some of my highlights:
 
 > It's fine that people talk to chatbots, but they should not expect me to listen to theirs. When I *want* to talk to a chatbot, I have plenty of my own.
 

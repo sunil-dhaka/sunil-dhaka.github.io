@@ -5,7 +5,7 @@ date: 2026-01-29
 categories: ['til']
 tags: ['cli', 'productivity', 'terminal']
 description: "How I use try to quickly navigate experiments and clone repos for exploration."
-author: Sunil Dhaka and Claude Opus 4.5
+author: Sunil Dhaka
 ---
 
 ![Terminal showing the try TUI: a fuzzy search bar filters experiment directories, with results listing projects like redis-clone and ml-experiments in a clean dark terminal interface](/assets/images/try-workflow.svg)

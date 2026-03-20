@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Feature Scaling: A Comprehensive Guide"
+title: "Feature Scaling: A Little Guide"
 date: 2025-07-19
 categories: ['ai']
 tags: ['feature-engineering', 'data-preprocessing', 'best-practices']
 description: "An in-depth look at why, when, and how to apply feature scaling for various machine learning algorithms, from distance-based models to tree ensembles."
-author: Sunil Dhaka
+author: Sunil Dhaka and Opus 4
 ---
 
 Feature scaling ensures all features live on a comparable scale—critical when models rely on distances or gradient magnitudes. But is it always necessary? Let’s unpack it.
