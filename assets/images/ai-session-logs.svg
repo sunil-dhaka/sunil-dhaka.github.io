@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360">
+  <!-- Background -->
+  <rect width="800" height="360" fill="#0f0f0f" rx="12"/>
+
+  <!-- Word cloud: size = prominence in post, color = theme cluster -->
+  <!-- Large/primary words -->
+  <text x="280" y="95" font-family="monospace" font-size="38" font-weight="bold" fill="#a78bfa">CLIs</text>
+  <text x="120" y="175" font-family="monospace" font-size="34" font-weight="bold" fill="#22d3ee">Obsidian</text>
+  <text x="430" y="200" font-family="monospace" font-size="32" font-weight="bold" fill="#facc15">Android</text>
+  <text x="80" y="260" font-family="monospace" font-size="30" font-weight="bold" fill="#f472b6">visual explainers</text>
+  <text x="500" y="130" font-family="monospace" font-size="28" font-weight="bold" fill="#ef4444">emails</text>
+
+  <!-- Medium words -->
+  <text x="60" y="115" font-family="monospace" font-size="20" fill="#ff9900">Myntra</text>
+  <text x="420" y="75" font-family="monospace" font-size="19" fill="#9ca3af">Kindle</text>
+  <text x="580" y="95" font-family="monospace" font-size="18" fill="#22c55e">EPUBs</text>
+  <text x="355" y="155" font-family="monospace" font-size="21" fill="#6ee7b7">Telegram</text>
+  <text x="560" y="165" font-family="monospace" font-size="17" fill="#ff9900">Amazon</text>
+  <text x="640" y="200" font-family="monospace" font-size="20" fill="#a78bfa">ML</text>
+  <text x="105" y="210" font-family="monospace" font-size="16" fill="#facc15">TTS</text>
+  <text x="340" y="240" font-family="monospace" font-size="19" fill="#22c55e">NanoMaps</text>
+  <text x="550" y="240" font-family="monospace" font-size="17" fill="#ef4444">Nova Reel</text>
+  <text x="480" y="270" font-family="monospace" font-size="18" fill="#9ca3af">RSS</text>
+  <text x="60" y="305" font-family="monospace" font-size="19" fill="#22d3ee">traceroute</text>
+  <text x="680" y="130" font-family="monospace" font-size="15" fill="#f472b6">ASML</text>
+
+  <!-- Small/detail words -->
+  <text x="60" y="80" font-family="monospace" font-size="13" fill="#525252">WhatsApp</text>
+  <text x="175" y="68" font-family="monospace" font-size="12" fill="#525252">supplements</text>
+  <text x="570" y="60" font-family="monospace" font-size="13" fill="#525252">bookmarks</text>
+  <text x="290" y="62" font-family="monospace" font-size="11" fill="#525252">Drive folders</text>
+  <text x="400" y="55" font-family="monospace" font-size="12" fill="#525252">calendars</text>
+  <text x="680" y="68" font-family="monospace" font-size="11" fill="#525252">PyTorch</text>
+  <text x="200" y="145" font-family="monospace" font-size="14" fill="#525252">fuzzy matching</text>
+  <text x="555" y="150" font-family="monospace" font-size="12" fill="#525252">Templater</text>
+  <text x="690" y="175" font-family="monospace" font-size="11" fill="#525252">Xavier</text>
+  <text x="160" y="230" font-family="monospace" font-size="12" fill="#525252">clippings</text>
+  <text x="250" y="220" font-family="monospace" font-size="11" fill="#525252">Imagen</text>
+  <text x="700" y="225" font-family="monospace" font-size="12" fill="#525252">Gemini</text>
+  <text x="230" y="285" font-family="monospace" font-size="14" fill="#525252">RadioGarden</text>
+  <text x="380" y="290" font-family="monospace" font-size="12" fill="#525252">Moonshine</text>
+  <text x="550" y="290" font-family="monospace" font-size="13" fill="#525252">Dicta</text>
+  <text x="640" y="275" font-family="monospace" font-size="11" fill="#525252">Numa Numa</text>
+  <text x="60" y="335" font-family="monospace" font-size="12" fill="#525252">Strong Towns</text>
+  <text x="200" y="325" font-family="monospace" font-size="13" fill="#525252">cron jobs</text>
+  <text x="320" y="315" font-family="monospace" font-size="11" fill="#525252">Perplexity</text>
+  <text x="430" y="325" font-family="monospace" font-size="12" fill="#525252">speed-dialer</text>
+  <text x="590" y="310" font-family="monospace" font-size="11" fill="#525252">rss-reader</text>
+  <text x="680" y="320" font-family="monospace" font-size="12" fill="#525252">Vosk</text>
+  <text x="700" y="295" font-family="monospace" font-size="10" fill="#525252">NanoBanana</text>
+  <text x="490" y="55" font-family="monospace" font-size="11" fill="#525252">IITK</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="352" font-family="system-ui, sans-serif" font-size="11" fill="#3f3f46" text-anchor="middle">the terminal had become my everything app</text>
+</svg>
