@@ -8,12 +8,12 @@ permalink: /projects/
 
 | Project | Description |
 |:--------|:------------|
-| [Android Apps](https://github.com/sunil-dhaka) | [NanoMaps](https://github.com/sunil-dhaka/NanoMaps), [Digitizer](https://github.com/sunil-dhaka/Digitizer), [Dicta](https://github.com/sunil-dhaka/Dicta), [RateBook](https://github.com/sunil-dhaka/RateBook), [Reminder](https://github.com/sunil-dhaka/Reminder), [RSSReader](https://github.com/sunil-dhaka/RSSReader), [SpeedDial](https://github.com/sunil-dhaka/SpeedDial), [Kaleidoscope](https://github.com/sunil-dhaka/Kaleidoscope), [RadioGarden](https://github.com/sunil-dhaka/RadioGarden) |
-| [amazon-cli](https://github.com/sunil-dhaka/amazon-cli) | Search, compare, and explore Amazon.in products from the terminal, for agents |
-| [myntra-cli](https://github.com/sunil-dhaka/myntra-cli) | Search products, view size charts, and track orders on Myntra from the terminal, for agents |
-| [StoryCanvas](https://github.com/sunil-dhaka/storycanvas) | TypeScript CLI to transform books into illustrated videos with AI |
-| [SceneCraft](https://github.com/sunil-dhaka/scenecraft) | TypeScript CLI to generate creative video prompts from text and documents |
-| [TubeCast](https://github.com/sunil-dhaka/tubecast) | Python CLI for YouTube uploads with AI-powered metadata generation |
+| [Android Apps](https://sunil-dhaka.github.io/android-apps/) | [NanoMaps](https://github.com/sunil-dhaka/NanoMaps), [Digitizer](https://github.com/sunil-dhaka/Digitizer), [Dicta](https://github.com/sunil-dhaka/Dicta), [RateBook](https://github.com/sunil-dhaka/RateBook), [Reminder](https://github.com/sunil-dhaka/Reminder), [RSSReader](https://github.com/sunil-dhaka/RSSReader), [SpeedDial](https://github.com/sunil-dhaka/SpeedDial), [Kaleidoscope](https://github.com/sunil-dhaka/Kaleidoscope), [RadioGarden](https://github.com/sunil-dhaka/RadioGarden) |
+| [amazon-cli](https://sunil-dhaka.github.io/amazon-cli/) | Search, compare, and explore Amazon.in products from the terminal, for agents |
+| [myntra-cli](https://sunil-dhaka.github.io/myntra-cli/) | Search products, view size charts, and track orders on Myntra from the terminal, for agents |
+| [StoryCanvas](https://sunil-dhaka.github.io/storycanvas/) | TypeScript CLI to transform books into illustrated videos with AI |
+| [SceneCraft](https://sunil-dhaka.github.io/scenecraft/) | TypeScript CLI to generate creative video prompts from text and documents |
+| [TubeCast](https://sunil-dhaka.github.io/tubecast/) | Python CLI for YouTube uploads with AI-powered metadata generation |
 | [AutoDownloader](https://github.com/sunil-dhaka/autodownloader-helloiitk) | Python tool to bulk-download lecture videos, quizzes, and forum posts from the Hello IITK platform |
 
 
