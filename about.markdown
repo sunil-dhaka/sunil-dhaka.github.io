@@ -12,4 +12,6 @@ Math & Stats grad from IIT Kanpur with a ML minor. Interested in all things tech
 
 **What is this website for?** Mostly a portfolio and a place to jot down technical notes for my self reference. If something here happens to help you too, that's a bonus.
 
+**On AI use:** When AI assists in writing a post, it is disclosed as a co-author. I rarely use it for first drafts - mostly for spell-checking and rubberducking.
+
 **Say hello:** Best way to reach me is [email](mailto:sunil.dhaka.iitk@gmail.com). Also on [LinkedIn](https://www.linkedin.com/in/sunil-dhaka) and [GitHub](https://github.com/sunil-dhaka).
